@@ -1,0 +1,2 @@
+# SlimeIdle
+Idle game
