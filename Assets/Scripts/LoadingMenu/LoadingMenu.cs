@@ -9,5 +9,8 @@ public class LoadingMenu : MonoBehaviour {
         SceneManager.LoadScene(1);
     }
 
+    public void DeleteSave() {
+        PlayerPrefs.DeleteAll();
+    }
 	
 }
