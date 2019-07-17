@@ -24,6 +24,7 @@ public class GlobalFighter : MonoBehaviour {
     public static bool turnOffButton = false;
 
     void Update () {
+        FighterValue = 20 * Math.Pow(1.5, FighterLevel);
         FighterDPS = FighterDamage * Math.Pow(1.5, FighterLevel - 1);
         currentMoney = GlobalMoney.MoneyCount;
         FigherStat.GetComponent<Text>().text = "Fighter Lvl." + FighterLevel + " (" + Convert.ToInt32(FighterDPS) + " DPS)";
