@@ -33,8 +33,14 @@ public class LoadGame : MonoBehaviour{
 
         //hp stuff
         savedHp = PlayerPrefs.GetInt("SavedHp");
+        if (savedHp == 0) { //wont spawn at level 0 anymore
+                savedHp = 10;
+            }
         GlobalHp.SlimeHp = savedHp;
         savedTempHp = PlayerPrefs.GetInt("SavedTempHp");
+        if (savedTempHp == 0) { //wont spawn at level 0 anymore
+            savedTempHp = 10;
+        }
         GlobalHp.TempHp = savedTempHp;
         savedSpawn = PlayerPrefs.GetInt("SavedSpawn");
         GlobalHp.slimeSpawn = savedSpawn;
