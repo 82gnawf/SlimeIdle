@@ -23,11 +23,6 @@ public class GlobalXp : MonoBehaviour
         PlayerLevel = LevelCount;
         SlimeLevel = LevelCount;
 
-        if (XpCount >= Math.Pow(2, LevelCount)) { // this is level up stuff
-            LevelCount++;
-            XpCount -= Convert.ToInt32(Math.Pow(2, LevelCount-1)); //double to int cause :(
-        }
-
         XpDisplay.GetComponent<Text>().text = "Level: " + PlayerLevel + " Xp: " + InternalXpCount + " / " + Math.Pow(2, LevelCount); //display for xp
         SlimeLevelDisplay.GetComponent<Text>().text = "Green Slime - Level: " + SlimeLevel; //display for slime level
 
