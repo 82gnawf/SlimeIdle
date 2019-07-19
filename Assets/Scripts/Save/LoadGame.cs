@@ -17,6 +17,8 @@ public class LoadGame : MonoBehaviour{
     public int savedLevelCount;
     public int savedXpCount;
 
+    public static bool spirteInit;
+
     void Start()
     {
         //currency
@@ -43,7 +45,13 @@ public class LoadGame : MonoBehaviour{
         }
         GlobalHp.TempHp = savedTempHp;
         savedSpawn = PlayerPrefs.GetInt("SavedSpawn");
+        if (savedSpawn == 0) {
+            savedSpawn = 1;
+        }
         GlobalHp.slimeSpawn = savedSpawn;
+
+
+        spirteInit = false; 
 
         //xp
         savedLevelCount = PlayerPrefs.GetInt("SavedLevelCount");

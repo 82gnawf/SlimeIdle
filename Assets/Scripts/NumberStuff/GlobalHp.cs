@@ -21,18 +21,6 @@ public class GlobalHp : MonoBehaviour {
 
     private void Start() {
         TempHp = SlimeHp;
-        slimeSpawn = SlimeSpawn(GlobalXp.LevelCount);
-        switch (slimeSpawn) {
-            case 1:
-                SlimeImage.GetComponent<Image>().sprite = greenSlime;
-                break;
-            case 2:
-                SlimeImage.GetComponent<Image>().sprite = blueSlime;
-                break;
-            case 3:
-                SlimeImage.GetComponent<Image>().sprite = redSlime;
-                break;
-        }
     }
 
 
@@ -40,6 +28,11 @@ public class GlobalHp : MonoBehaviour {
     private void Update() {
         InternalHp = Convert.ToInt32(TempHp); //double to string
         HpDisplay.GetComponent<Text>().text = "Hp: " + InternalHp; //display
+
+        if (LoadGame.spirteInit == false) {
+            SlimeSprite();
+            LoadGame.spirteInit = true;
+        }
 
         if (TempHp <= 0.5) {
             GlobalSlime.SlimeCount += 1; //increases amount of slime by 1
@@ -50,18 +43,7 @@ public class GlobalHp : MonoBehaviour {
             }
 
             slimeSpawn = SlimeSpawn(GlobalXp.LevelCount);
-            switch (slimeSpawn) {
-                case 1:
-                   SlimeImage.GetComponent<Image>().sprite = greenSlime;
-                    break;
-                case 2:
-                    SlimeImage.GetComponent<Image>().sprite = blueSlime;
-                    break;
-                case 3:
-                    SlimeImage.GetComponent<Image>().sprite = redSlime;
-                    break;
-            }
-       
+            SlimeSprite();
 
             SlimeHp = (10 * Math.Pow(1.1, GlobalXp.LevelCount - 1));
             TempHp = SlimeHp; //resets slime hp
@@ -88,9 +70,23 @@ public class GlobalHp : MonoBehaviour {
                 n = 2;
                 break;
             case 5:
-                n = 2;
+                n = 3;
                 break;
         }
         return n;
+    }
+
+    public void SlimeSprite() {
+        switch (slimeSpawn) {
+            case 1:
+                SlimeImage.GetComponent<Image>().sprite = greenSlime;
+                break;
+            case 2:
+                SlimeImage.GetComponent<Image>().sprite = blueSlime;
+                break;
+            case 3:
+                SlimeImage.GetComponent<Image>().sprite = redSlime;
+                break;
+        }
     }
 }
