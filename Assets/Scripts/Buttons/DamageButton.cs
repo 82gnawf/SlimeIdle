@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public class DamageButtonClick : MonoBehaviour {
-
-    public GameObject textBox; 
+public class DamageButton : MonoBehaviour {
 
 	public void ButtonClick () {
         GlobalHp.TempHp -= 4;

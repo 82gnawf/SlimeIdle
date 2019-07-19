@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class SellButton : MonoBehaviour {
 
-    public GameObject textBox;
-
 	public void ButtonClick () {
         if (GlobalSlime.SlimeCount == 0) {
             
