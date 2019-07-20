@@ -9,7 +9,9 @@ public class LowerButtonPanelInit : MonoBehaviour
 
     public Button SellSlimeButton;
     public Button BuyUnitButton;
-
+    public Button SwordButton;
+    public Button SlimeProductionButton;
+    public Button PrestigeButton;
 
     public Sprite SellImage;
     public Sprite BuyUnitsImage;
