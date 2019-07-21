@@ -7,11 +7,11 @@ public class GlobalSlime : MonoBehaviour
 {
     public GameObject SlimeDisplay;
 
-    public static int SlimeCount;
-    public int InternalSlimeCount;
+    public static int greenSlimeCount;
+    public int InternalgreenSlimeCount;
 
     private void Update() {
-        InternalSlimeCount = SlimeCount; 
-        SlimeDisplay.GetComponent<Text>().text = "X " + InternalSlimeCount; //display
+        InternalgreenSlimeCount = greenSlimeCount; 
+        SlimeDisplay.GetComponent<Text>().text = "X " + InternalgreenSlimeCount; //display
     }
 }

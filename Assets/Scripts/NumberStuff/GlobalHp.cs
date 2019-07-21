@@ -37,7 +37,7 @@ public class GlobalHp : MonoBehaviour {
         }
 
         if (TempHp <= 0.5) {
-            GlobalSlime.SlimeCount += 1; //increases amount of slime by 1
+            GlobalSlime.greenSlimeCount += 1; //increases amount of slime by 1
             GlobalXp.XpCount += 1; //increase xp by 1
             if (GlobalXp.XpCount >= Math.Pow(2, GlobalXp.LevelCount)) { // this is level up stuff
                 GlobalXp.LevelCount++;

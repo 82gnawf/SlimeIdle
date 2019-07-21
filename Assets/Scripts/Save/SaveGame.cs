@@ -16,7 +16,7 @@ public class SaveGame : MonoBehaviour {
 
     IEnumerator SaveValues() {
 
-        PlayerPrefs.SetInt("SavedSlimes", GlobalSlime.SlimeCount);
+        PlayerPrefs.SetInt("greenSavedSlimes", GlobalSlime.greenSlimeCount);
         PlayerPrefs.SetInt("SavedMoney", GlobalMoney.MoneyCount);
         PlayerPrefs.SetInt("SavedFigther", GlobalFighter.FighterLevel);
         PlayerPrefs.SetInt("SavedSeller", GlobalSeller.SellerLevel);

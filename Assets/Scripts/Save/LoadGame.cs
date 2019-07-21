@@ -7,7 +7,7 @@ public class LoadGame : MonoBehaviour{
     public GameObject AutoDamage;
     public GameObject AutoSell;
 
-    public int savedSlimes;
+    public int greenSavedSlimes;
     public int savedMoney;
     public int savedFighter;
     public int savedSeller;
@@ -22,8 +22,8 @@ public class LoadGame : MonoBehaviour{
     void Start()
     {
         //currency
-        savedSlimes = PlayerPrefs.GetInt("SavedSlimes");
-        GlobalSlime.SlimeCount = savedSlimes;
+        greenSavedSlimes = PlayerPrefs.GetInt("greenSavedSlimes");
+        GlobalSlime.greenSlimeCount = greenSavedSlimes;
         savedMoney = PlayerPrefs.GetInt("SavedMoney");
         GlobalMoney.MoneyCount = savedMoney;
 

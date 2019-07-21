@@ -6,36 +6,32 @@ using UnityEngine.UI;
 public class SellButton : MonoBehaviour {
 
     public int tempSlime;
-    GameObject SlimePanelType;
 
-	public void ButtonClick1 () {
-        if (GlobalSlime.SlimeCount > 0) {
-            GlobalSlime.SlimeCount -= 1; //reduces slime amount
-            SlimePanelType = gameObject.GetComponentInParent<GameObject>();
+    //green
+	public void GreenButtonClick1 () {
+        if (GlobalSlime.greenSlimeCount > 0) {
+            GlobalSlime.greenSlimeCount -= 1; //reduces slime amount
             GlobalMoney.MoneyCount += GlobalMoney.greenWorth; //get money per slime sold
             GlobalMoney.MoneyForPrestige += 2;
         }
     }
-
-    public void ButtonClick10() {
-        if (GlobalSlime.SlimeCount >= 10) {
-            GlobalSlime.SlimeCount -= 10; 
+    public void GreenButtonClick10() {
+        if (GlobalSlime.greenSlimeCount >= 10) {
+            GlobalSlime.greenSlimeCount -= 10; 
             GlobalMoney.MoneyCount += GlobalMoney.greenWorth * 10; 
             GlobalMoney.MoneyForPrestige += 2;
         }
     }
-
-    public void ButtonClick100() {
-        if (GlobalSlime.SlimeCount >= 100) {
-            GlobalSlime.SlimeCount -= 100; 
+    public void GreenButtonClick100() {
+        if (GlobalSlime.greenSlimeCount >= 100) {
+            GlobalSlime.greenSlimeCount -= 100; 
             GlobalMoney.MoneyCount += GlobalMoney.greenWorth * 100;
             GlobalMoney.MoneyForPrestige += 2;
         }
     }
-
-    public void ButtonClickMax() {
-        tempSlime = GlobalSlime.SlimeCount;
-        GlobalSlime.SlimeCount = 0; 
+    public void GreenButtonClickMax() {
+        tempSlime = GlobalSlime.greenSlimeCount;
+        GlobalSlime.greenSlimeCount = 0; 
         GlobalMoney.MoneyCount += GlobalMoney.greenWorth * tempSlime;
         GlobalMoney.MoneyForPrestige += 2;
     }

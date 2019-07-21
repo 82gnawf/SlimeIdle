@@ -19,14 +19,14 @@ public class AutoSell : MonoBehaviour {
         }
     }
     IEnumerator SellSlime() {
-        if (GlobalSlime.SlimeCount > 0 && GlobalSlime.SlimeCount < InternalSell) {
-            GlobalMoney.MoneyCount += (2 * GlobalSlime.SlimeCount);
-            GlobalSlime.SlimeCount -= GlobalSlime.SlimeCount;
+        if (GlobalSlime.greenSlimeCount > 0 && GlobalSlime.greenSlimeCount < InternalSell) {
+            GlobalMoney.MoneyCount += (2 * GlobalSlime.greenSlimeCount);
+            GlobalSlime.greenSlimeCount -= GlobalSlime.greenSlimeCount;
             yield return new WaitForSeconds(1); //waits for (x) seconds
             SlimeAutoSell = false; //resets the bool
         }
-        else if (GlobalSlime.SlimeCount > 0) {
-            GlobalSlime.SlimeCount -= InternalSell;
+        else if (GlobalSlime.greenSlimeCount > 0) {
+            GlobalSlime.greenSlimeCount -= InternalSell;
             GlobalMoney.MoneyCount += (2 * InternalSell); //should be value of slime TODO
             yield return new WaitForSeconds(1); //waits for (x) seconds
             SlimeAutoSell = false; //resets the bool
