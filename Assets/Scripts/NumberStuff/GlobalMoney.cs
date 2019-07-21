@@ -10,8 +10,14 @@ public class GlobalMoney : MonoBehaviour
     public static int MoneyCount;
     public int InternalMoneyCount;
 
+    public static int greenWorth = 2;
+    public static int blueWorth = 4;
+    public static int redWorth = 5;
+
+    public static int MoneyForPrestige;
+
     private void Update() {
         InternalMoneyCount = MoneyCount;
-        MoneyDisplay.GetComponent<Text>().text = "Money: " + InternalMoneyCount; //display
+        MoneyDisplay.GetComponent<Text>().text = "Money: $" + InternalMoneyCount; //display
     }
 }

@@ -12,6 +12,6 @@ public class GlobalSlime : MonoBehaviour
 
     private void Update() {
         InternalSlimeCount = SlimeCount; 
-        SlimeDisplay.GetComponent<Text>().text = "Slime: " + InternalSlimeCount; //display
+        SlimeDisplay.GetComponent<Text>().text = "X " + InternalSlimeCount; //display
     }
 }

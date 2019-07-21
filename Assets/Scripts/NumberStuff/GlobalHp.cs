@@ -13,6 +13,8 @@ public class GlobalHp : MonoBehaviour {
     public Sprite blueSlime;
     public Sprite redSlime;
 
+    public int slimeRand;  //used for random choosing of slime
+
     public static double SlimeHp = (10 * Math.Pow(1.1, GlobalXp.LevelCount - 1)); //real hp based on level
     public static double TempHp; //honestly don't know if i need this lol
     public int InternalHp;
@@ -50,11 +52,12 @@ public class GlobalHp : MonoBehaviour {
         }
     }
 
+    //random gens slime type; 1 = green, 2 = blue, etc.
     private int SlimeSpawn(int i) {
 
         System.Random random = new System.Random();
-        int slimeRand = random.Next(1, 10);
-        int n = 0; 
+        slimeRand = random.Next(1, 11); //between 1 and 10 inclusive fml 
+        int n = 0;
 
         switch (i) {
             case 1:
@@ -67,15 +70,48 @@ public class GlobalHp : MonoBehaviour {
                 n = 1;
                 break;
             case 4:
-                n = 2;
+                if (slimeRand > 8) {
+                    n = 2;
+                }
+                else {
+                    n = 1;
+                }
                 break;
             case 5:
-                n = 3;
+                if (slimeRand > 5) {
+                n = 2;
+                }
+                else {
+                    n = 1;
+                }
+                break;
+            case 6:
+                if (slimeRand > 9) {
+                    n = 3;
+                }
+                else if (slimeRand > 4 && slimeRand <= 9) {
+                    n = 2;
+                }
+                else {
+                    n = 1;
+                }
+                break;
+            case 7:
+                if (slimeRand > 7) {
+                    n = 3;
+                }
+                else if (slimeRand > 2 && slimeRand <= 7) {
+                    n = 2;
+                }
+                else {
+                    n = 1;
+                }
                 break;
         }
         return n;
     }
 
+    //decides the sprite of the slime that is going to spawn
     public void SlimeSprite() {
         switch (slimeSpawn) {
             case 1:
