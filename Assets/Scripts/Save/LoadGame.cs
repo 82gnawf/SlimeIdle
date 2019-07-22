@@ -17,7 +17,7 @@ public class LoadGame : MonoBehaviour{
     public int savedLevelCount;
     public int savedXpCount;
 
-    public static bool spirteInit;
+    public static bool spriteInit;
 
     void Start()
     {
@@ -51,7 +51,7 @@ public class LoadGame : MonoBehaviour{
         GlobalHp.slimeSpawn = savedSpawn;
 
 
-        spirteInit = false; 
+        spriteInit = false; 
 
         //xp
         savedLevelCount = PlayerPrefs.GetInt("SavedLevelCount");

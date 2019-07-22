@@ -23,7 +23,7 @@ public class GlobalSeller : MonoBehaviour {
     public static bool turnOffButton = false;
 
     void Update () {
-        SellerValue = 20 * Math.Pow(1.5, SellerLevel);
+        SellerValue = 20 * Math.Pow(10, SellerLevel);
         currentMoney = GlobalMoney.MoneyCount;
         SellerStat.GetComponent<Text>().text = "Seller Lvl." + SellerLevel + " (" + SellerSPS + " SPS)";
         displaySellerValue = Convert.ToInt32(SellerValue);

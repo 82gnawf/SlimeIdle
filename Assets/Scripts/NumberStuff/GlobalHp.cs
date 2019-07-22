@@ -15,11 +15,12 @@ public class GlobalHp : MonoBehaviour {
 
     public int slimeRand;  //used for random choosing of slime
 
-    public static double SlimeHp = (10 * Math.Pow(1.1, GlobalXp.LevelCount - 1)); //real hp based on level
+    public static int slimeSpawn; //what slime will be spawned
+    public static int typeHp = 10;
+
+    public static double SlimeHp = (typeHp * Math.Pow(1.1, GlobalXp.LevelCount - 1)); //real hp based on level
     public static double TempHp; //honestly don't know if i need this lol
     public int InternalHp;
-
-    public static int slimeSpawn;
 
     private void Start() {
         TempHp = SlimeHp;
@@ -31,9 +32,9 @@ public class GlobalHp : MonoBehaviour {
         InternalHp = Convert.ToInt32(TempHp); //double to string
         HpDisplay.GetComponent<Text>().text = "Hp: " + InternalHp; //display
 
-        if (LoadGame.spirteInit == false) {
+        if (LoadGame.spriteInit == false) {
             SlimeSprite();
-            LoadGame.spirteInit = true;
+            LoadGame.spriteInit = true;
         }
 
         if (TempHp <= 0.5) {
@@ -46,8 +47,9 @@ public class GlobalHp : MonoBehaviour {
 
             slimeSpawn = SlimeSpawn(GlobalXp.LevelCount);
             SlimeSprite();
+            typeHp = GenerateHp(slimeSpawn);
 
-            SlimeHp = (10 * Math.Pow(1.1, GlobalXp.LevelCount - 1));
+            SlimeHp = (typeHp * Math.Pow(1.1, GlobalXp.LevelCount - 1));
             TempHp = SlimeHp; //resets slime hp
         }
     }
@@ -124,5 +126,21 @@ public class GlobalHp : MonoBehaviour {
                 SlimeImage.GetComponent<Image>().sprite = redSlime;
                 break;
         }
+    }
+
+    public int GenerateHp(int j) {
+        int x = 10;
+        switch (slimeSpawn) {
+            case 1:
+                x = 10;
+                break;
+            case 2:
+                x = 15;
+                break;
+            case 3:
+                x = 20;
+                break;
+        }
+        return x;
     }
 }

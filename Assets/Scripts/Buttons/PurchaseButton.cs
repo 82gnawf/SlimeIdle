@@ -11,7 +11,6 @@ public class PurchaseButton : MonoBehaviour {
     public void StartAutoDamage() {
         AutoDamage.SetActive(true);
         GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalFighter.FighterValue);
-        GlobalFighter.FighterValue *= 1.5;
         GlobalFighter.turnOffButton = true;
         GlobalFighter.FighterLevel += 1;
         GlobalFighter.FighterDPS += 1;
@@ -20,7 +19,6 @@ public class PurchaseButton : MonoBehaviour {
     public void StartAutoSell() {
         AutoSell.SetActive(true);
         GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalSeller.SellerValue);
-        GlobalSeller.SellerValue *= 5;
         GlobalSeller.turnOffButton = true;
         GlobalSeller.SellerLevel += 1;
         GlobalSeller.SellerSPS += 1;
