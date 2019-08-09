@@ -1926,16 +1926,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1633235175}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 511920153}
+        m_MethodName: ProductionOpen
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -2314,16 +2314,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 556762412}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 511920153}
+        m_MethodName: PrestigeOpen
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -3463,6 +3463,11 @@ MonoBehaviour:
   SwordImage: {fileID: 21300000, guid: 44598c65b598ae449a228af478391c7f, type: 3}
   ProductionImage: {fileID: 21300000, guid: 11165b7aab989fa4abd38c2d0907f50c, type: 3}
   PrestigeImage: {fileID: 21300000, guid: d398fbb6f7194e84486ef407f2fe40fc, type: 3}
+  SellSlimePanel: {fileID: 657236956}
+  BuyUnitPanel: {fileID: 627312360}
+  SwordPanel: {fileID: 1386209408}
+  ProductionPanel: {fileID: 1633235175}
+  PrestigePanel: {fileID: 556762412}
 --- !u!114 &511920154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4334,7 +4339,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &657236957
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12619,16 +12624,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 657236956}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 511920153}
+        m_MethodName: SellOpen
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -13352,16 +13357,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 627312360}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 511920153}
+        m_MethodName: BuyOpen
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -13843,16 +13848,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1386209408}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 511920153}
+        m_MethodName: SwordOpen
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
@@ -15717,6 +15722,8 @@ MonoBehaviour:
   AutoDamage: {fileID: 1531817024}
   AutoSell: {fileID: 1794464131}
   greenSavedSlimes: 0
+  blueSavedSlimes: 0
+  redSavedSlimes: 0
   savedMoney: 0
   savedFighter: 0
   savedSeller: 0

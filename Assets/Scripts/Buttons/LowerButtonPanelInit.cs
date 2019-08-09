@@ -19,8 +19,13 @@ public class LowerButtonPanelInit : MonoBehaviour
     public Sprite ProductionImage;
     public Sprite PrestigeImage;
 
-    void Update()
-    {
+    public GameObject SellSlimePanel;
+    public GameObject BuyUnitPanel;
+    public GameObject SwordPanel;
+    public GameObject ProductionPanel;
+    public GameObject PrestigePanel;
+
+    void Update() {
 
         if (GlobalXp.LevelCount > 1) {
             SellSlimeButton.GetComponent<Image>().sprite = SellImage;
@@ -44,4 +49,45 @@ public class LowerButtonPanelInit : MonoBehaviour
         }
 
     }
+
+    public void SellOpen() {
+        SellSlimePanel.transform.gameObject.SetActive(true);
+        BuyUnitPanel.transform.gameObject.SetActive(false);
+        SwordPanel.transform.gameObject.SetActive(false);
+        ProductionPanel.transform.gameObject.SetActive(false);
+        PrestigePanel.transform.gameObject.SetActive(false);
+    }
+
+    public void BuyOpen() {
+        SellSlimePanel.transform.gameObject.SetActive(false);
+        BuyUnitPanel.transform.gameObject.SetActive(true);
+        SwordPanel.transform.gameObject.SetActive(false);
+        ProductionPanel.transform.gameObject.SetActive(false);
+        PrestigePanel.transform.gameObject.SetActive(false);
+    }
+
+    public void SwordOpen() {
+        SellSlimePanel.transform.gameObject.SetActive(false);
+        BuyUnitPanel.transform.gameObject.SetActive(false);
+        SwordPanel.transform.gameObject.SetActive(true);
+        ProductionPanel.transform.gameObject.SetActive(false);
+        PrestigePanel.transform.gameObject.SetActive(false);
+    }
+
+    public void ProductionOpen() {
+        SellSlimePanel.transform.gameObject.SetActive(false);
+        BuyUnitPanel.transform.gameObject.SetActive(false);
+        SwordPanel.transform.gameObject.SetActive(false);
+        ProductionPanel.transform.gameObject.SetActive(true);
+        PrestigePanel.transform.gameObject.SetActive(false);
+    }
+
+    public void PrestigeOpen() {
+        SellSlimePanel.transform.gameObject.SetActive(false);
+        BuyUnitPanel.transform.gameObject.SetActive(false);
+        SwordPanel.transform.gameObject.SetActive(false);
+        ProductionPanel.transform.gameObject.SetActive(false);
+        PrestigePanel.transform.gameObject.SetActive(true);
+    }
+
 }
