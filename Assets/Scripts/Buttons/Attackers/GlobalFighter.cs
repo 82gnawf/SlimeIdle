@@ -14,10 +14,10 @@ public class GlobalFighter : MonoBehaviour {
     public GameObject FigherStat;
 
     public int currentMoney;
-    public static double FighterValue = 20; //cost of fighters
+    public static double FighterValue; //cost of fighters
     public int displayFighterValue; //god im being trolled
     public static int FighterLevel; //level of fighter
-    public static int FighterDamage = 4; //damage that fighter deals
+    public static double FighterDamage; //damage that fighter deals
 
     public static double FighterDPS;
 
@@ -25,7 +25,8 @@ public class GlobalFighter : MonoBehaviour {
 
     void Update () {
         FighterValue = 20 * Math.Pow(1.5, FighterLevel);
-        FighterDPS = FighterDamage * Math.Pow(1.5, FighterLevel - 1);
+        FighterDamage = 4 * Math.Pow(1.5, FighterLevel - 1);
+        FighterDPS = FighterDamage;
         currentMoney = GlobalMoney.MoneyCount;
         FigherStat.GetComponent<Text>().text = "Fighter Lvl." + FighterLevel + " (" + Convert.ToInt32(FighterDPS) + " DPS)";
         displayFighterValue = Convert.ToInt32(FighterValue);

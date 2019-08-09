@@ -12,6 +12,7 @@ public class LoadGame : MonoBehaviour{
     public int redSavedSlimes;
     public int savedMoney;
     public int savedFighter;
+    public int savedArcher;
     public int savedSeller;
     public int savedHp;
     public int savedTempHp;
@@ -35,7 +36,9 @@ public class LoadGame : MonoBehaviour{
 
         //units
         savedFighter = PlayerPrefs.GetInt("SavedFigther");
-        GlobalFighter.FighterLevel = savedFighter; 
+        GlobalFighter.FighterLevel = savedFighter;
+        savedArcher = PlayerPrefs.GetInt("SavedFigther");
+        GlobalArcher.ArcherLevel = savedArcher;
         savedSeller = PlayerPrefs.GetInt("SavedSeller");
         GlobalSeller.SellerLevel = savedSeller;
 

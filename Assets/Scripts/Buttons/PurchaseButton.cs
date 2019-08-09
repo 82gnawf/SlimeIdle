@@ -5,15 +5,24 @@ using UnityEngine;
 
 public class PurchaseButton : MonoBehaviour {
 
-    public GameObject AutoDamage;
+    public GameObject AutoDamageFighter;
+    public GameObject AutoDamageArcher;
     public GameObject AutoSell;
 
-    public void StartAutoDamage() {
-        AutoDamage.SetActive(true);
+    public void StartAutoDamageFigther() {
+        AutoDamageFighter.SetActive(true);
         GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalFighter.FighterValue);
         GlobalFighter.turnOffButton = true;
         GlobalFighter.FighterLevel += 1;
-        GlobalFighter.FighterDPS += 1;
+        GlobalFighter.FighterDamage += 1;
+    }
+
+    public void StartAutoDamageArcher() {
+        AutoDamageArcher.SetActive(true);
+        GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalArcher.ArcherValue);
+        GlobalArcher.turnOffButton = true;
+        GlobalArcher.ArcherLevel += 1;
+        GlobalArcher.ArcherDamage += 1;
     }
 
     public void StartAutoSell() {

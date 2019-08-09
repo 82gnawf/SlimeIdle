@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class LowerButtonPanelInit : MonoBehaviour
 {
-
     public Button SellSlimeButton;
     public Button BuyUnitButton;
     public Button SwordButton;

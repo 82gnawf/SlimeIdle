@@ -6,6 +6,6 @@ using UnityEngine;
 public class DamageButton : MonoBehaviour {
 
 	public void ButtonClick () {
-        GlobalHp.TempHp -= 4;
+        GlobalHp.TempHp -= 5;
     }
 }

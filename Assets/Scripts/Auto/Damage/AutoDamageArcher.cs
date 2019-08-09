@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 
-public class AutoDamage : MonoBehaviour { 
+public class AutoDamageArcher : MonoBehaviour { 
 
-    public bool SlimeAutoDamage = false; //bool for auto attack
+    public bool ArcherAutoDamage = false; //bool for auto attack
     public static int SlimeDamage;
     public int InternalDamage;
 	
 	void Update () {
-        SlimeDamage = Convert.ToInt32(GlobalFighter.FighterDPS);
+        SlimeDamage = Convert.ToInt32(GlobalArcher.ArcherDPS);
         InternalDamage = SlimeDamage;
 
-        if (SlimeAutoDamage == false){
-            SlimeAutoDamage = true;
+        if (ArcherAutoDamage == false){
+            ArcherAutoDamage = true;
             StartCoroutine(DamageSlime()); //starts IEnumerator DamageSlime()
         }
 	}
@@ -22,6 +22,6 @@ public class AutoDamage : MonoBehaviour {
         GlobalHp.TempHp -= InternalDamage; //deals the damage
 
         yield return new WaitForSeconds(1); //waits for (x) seconds
-        SlimeAutoDamage = false; //resets the bool
+        ArcherAutoDamage = false; //resets the bool
     }
 }
