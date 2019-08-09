@@ -391,7 +391,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920151}
-        m_MethodName: GreenButtonClick100
+        m_MethodName: RedButtonClick100
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2691,7 +2691,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920151}
-        m_MethodName: GreenButtonClick1
+        m_MethodName: RedButtonClick1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7087,7 +7087,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920151}
-        m_MethodName: GreenButtonClick1
+        m_MethodName: BlueButtonClick1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8827,7 +8827,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920151}
-        m_MethodName: GreenButtonClick100
+        m_MethodName: BlueButtonClick100
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11091,7 +11091,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920151}
-        m_MethodName: GreenButtonClick10
+        m_MethodName: RedButtonClick10
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11522,7 +11522,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920151}
-        m_MethodName: GreenButtonClickMax
+        m_MethodName: RedButtonClickMax
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13604,7 +13604,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920151}
-        m_MethodName: GreenButtonClickMax
+        m_MethodName: BlueButtonClickMax
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14708,7 +14708,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920151}
-        m_MethodName: GreenButtonClick10
+        m_MethodName: BlueButtonClick10
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
