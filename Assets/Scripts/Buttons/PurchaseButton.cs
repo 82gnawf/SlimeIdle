@@ -7,6 +7,7 @@ public class PurchaseButton : MonoBehaviour {
 
     public GameObject AutoDamageFighter;
     public GameObject AutoDamageArcher;
+    public GameObject AutoDamageWarrior;
     public GameObject AutoSell;
 
     public void StartAutoDamageFigther() {
@@ -23,6 +24,14 @@ public class PurchaseButton : MonoBehaviour {
         GlobalArcher.turnOffButton = true;
         GlobalArcher.ArcherLevel += 1;
         GlobalArcher.ArcherDamage += 1;
+    }
+
+    public void StartAutoDamageWarrior() {
+        AutoDamageWarrior.SetActive(true);
+        GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalWarrior.WarriorValue);
+        GlobalWarrior.turnOffButton = true;
+        GlobalWarrior.WarriorLevel += 1;
+        GlobalWarrior.WarriorDamage += 1;
     }
 
     public void StartAutoSell() {

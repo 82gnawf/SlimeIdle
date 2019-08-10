@@ -11,7 +11,7 @@ public class GlobalArcher : MonoBehaviour {
     public GameObject realButton;
     public GameObject fakeText;
     public GameObject realText;
-    public GameObject FigherStat;
+    public GameObject ArcherStat;
 
     public int currentMoney;
     public static double ArcherValue; //cost
@@ -28,7 +28,14 @@ public class GlobalArcher : MonoBehaviour {
         ArcherDamage = 6 * Math.Pow(1.5, ArcherLevel - 1);
         ArcherDPS = ArcherDamage;
         currentMoney = GlobalMoney.MoneyCount;
-        FigherStat.GetComponent<Text>().text = "Archer Lvl." + ArcherLevel + " (" + Convert.ToInt32(ArcherDPS) + " DPS)";
+
+        if (ArcherLevel == 0) {
+            ArcherStat.GetComponent<Text>().text = "Archer Lvl.0";
+        }
+        else {
+            ArcherStat.GetComponent<Text>().text = "Archer Lvl." + ArcherLevel + " (" + Convert.ToInt32(ArcherDPS) + " DPS)";
+        }
+
         displayArcherValue = Convert.ToInt32(ArcherValue);
 
         if (ArcherLevel == 0) { //lvl statements

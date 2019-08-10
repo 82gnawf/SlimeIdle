@@ -22,6 +22,7 @@ public class SaveGame : MonoBehaviour {
         PlayerPrefs.SetInt("SavedMoney", GlobalMoney.MoneyCount);
         PlayerPrefs.SetInt("SavedFigther", GlobalFighter.FighterLevel);
         PlayerPrefs.SetInt("SavedArcher", GlobalArcher.ArcherLevel);
+        PlayerPrefs.SetInt("SavedWarrior", GlobalWarrior.WarriorLevel);
         PlayerPrefs.SetInt("SavedSeller", GlobalSeller.SellerLevel);
         PlayerPrefs.SetInt("SavedHp", Convert.ToInt32(GlobalHp.SlimeHp));
         PlayerPrefs.SetInt("SavedTempHp", Convert.ToInt32(GlobalHp.TempHp));

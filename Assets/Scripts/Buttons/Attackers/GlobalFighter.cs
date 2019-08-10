@@ -11,13 +11,13 @@ public class GlobalFighter : MonoBehaviour {
     public GameObject realButton;
     public GameObject fakeText;
     public GameObject realText;
-    public GameObject FigherStat;
+    public GameObject FighterStat;
 
     public int currentMoney;
-    public static double FighterValue; //cost of fighters
+    public static double FighterValue; //cost 
     public int displayFighterValue; //god im being trolled
-    public static int FighterLevel; //level of fighter
-    public static double FighterDamage; //damage that fighter deals
+    public static int FighterLevel; //level
+    public static double FighterDamage; //damage dealt
 
     public static double FighterDPS;
 
@@ -28,7 +28,14 @@ public class GlobalFighter : MonoBehaviour {
         FighterDamage = 4 * Math.Pow(1.5, FighterLevel - 1);
         FighterDPS = FighterDamage;
         currentMoney = GlobalMoney.MoneyCount;
-        FigherStat.GetComponent<Text>().text = "Fighter Lvl." + FighterLevel + " (" + Convert.ToInt32(FighterDPS) + " DPS)";
+
+        if (FighterLevel == 0) {
+            FighterStat.GetComponent<Text>().text = "Fighter Lvl.0";
+        }
+        else {
+            FighterStat.GetComponent<Text>().text = "Fighter Lvl." + FighterLevel + " (" + Convert.ToInt32(FighterDPS) + " DPS)";
+        }
+
         displayFighterValue = Convert.ToInt32(FighterValue);
 
         if (FighterLevel == 0) { //lvl statements

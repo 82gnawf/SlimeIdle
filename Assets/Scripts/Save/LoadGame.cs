@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class LoadGame : MonoBehaviour{
 
-    public GameObject AutoDamage;
+    public GameObject FighterAutoDamage;
+    public GameObject ArcherAutoDamage;
+    public GameObject WarriorAutoDamage;
+
     public GameObject AutoSell;
 
     public int greenSavedSlimes;
@@ -13,6 +16,7 @@ public class LoadGame : MonoBehaviour{
     public int savedMoney;
     public int savedFighter;
     public int savedArcher;
+    public int savedWarrior;
     public int savedSeller;
     public int savedHp;
     public int savedTempHp;
@@ -37,8 +41,10 @@ public class LoadGame : MonoBehaviour{
         //units
         savedFighter = PlayerPrefs.GetInt("SavedFigther");
         GlobalFighter.FighterLevel = savedFighter;
-        savedArcher = PlayerPrefs.GetInt("SavedFigther");
+        savedArcher = PlayerPrefs.GetInt("SavedArcher");
         GlobalArcher.ArcherLevel = savedArcher;
+        savedWarrior = PlayerPrefs.GetInt("SavedWarrior");
+        GlobalWarrior.WarriorLevel = savedWarrior;
         savedSeller = PlayerPrefs.GetInt("SavedSeller");
         GlobalSeller.SellerLevel = savedSeller;
 
@@ -73,7 +79,13 @@ public class LoadGame : MonoBehaviour{
 
         //autodmg checker
         if (GlobalFighter.FighterLevel > 0) { 
-            AutoDamage.SetActive(true);
+            FighterAutoDamage.SetActive(true);
+        }
+        if (GlobalArcher.ArcherLevel > 0) {
+            ArcherAutoDamage.SetActive(true);
+        }
+        if (GlobalWarrior.WarriorLevel > 0) {
+            WarriorAutoDamage.SetActive(true);
         }
         if (GlobalSeller.SellerLevel > 0) {
             AutoSell.SetActive(true);

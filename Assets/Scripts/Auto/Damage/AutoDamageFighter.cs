@@ -10,7 +10,7 @@ public class AutoDamageFighter : MonoBehaviour {
     public int InternalDamage;
 	
 	void Update () {
-        SlimeDamage = Convert.ToInt32(GlobalFighter.FighterDPS);
+        SlimeDamage = Convert.ToInt32(GlobalFighter.FighterDamage);
         InternalDamage = SlimeDamage;
 
         if (FighterAutoDamage == false){
