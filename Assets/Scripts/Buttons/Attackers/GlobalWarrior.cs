@@ -21,8 +21,6 @@ public class GlobalWarrior : MonoBehaviour {
 
     public static double WarriorDPS;
 
-    public static bool turnOffButton = false;
-
     void Update() {
         WarriorValue = 100 * Math.Pow(1.5, WarriorLevel);
         WarriorDamage = 10 * Math.Pow(1.5, WarriorLevel - 1);
@@ -56,11 +54,7 @@ public class GlobalWarrior : MonoBehaviour {
             fakeButton.SetActive(true);  //activate fake
         }
 
-        if (turnOffButton == true) {
-            realButton.SetActive(false); //deactivate real
-            fakeButton.SetActive(true);  //activate fake
-            turnOffButton = false;
-        }
+     
     }
 }
 

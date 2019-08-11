@@ -21,8 +21,6 @@ public class GlobalFighter : MonoBehaviour {
 
     public static double FighterDPS;
 
-    public static bool turnOffButton = false;
-
     void Update () {
         FighterValue = 20 * Math.Pow(1.5, FighterLevel);
         FighterDamage = 4 * Math.Pow(1.5, FighterLevel - 1);
@@ -56,10 +54,6 @@ public class GlobalFighter : MonoBehaviour {
             fakeButton.SetActive(true);  //activate fake
         }
 
-        if (turnOffButton == true) {
-            realButton.SetActive(false); //deactivate real
-            fakeButton.SetActive(true);  //activate fake
-            turnOffButton = false;
-        }
+        
 	}
 }

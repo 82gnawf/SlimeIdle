@@ -6,6 +6,7 @@ using UnityEngine;
 public class DamageButton : MonoBehaviour {
 
 	public void ButtonClick () {
-        GlobalHp.TempHp -= 5;
+     
+        GlobalHp.TempHp -= GlobalSword.SwordDamage;
     }
 }

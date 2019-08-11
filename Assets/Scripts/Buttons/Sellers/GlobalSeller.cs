@@ -20,8 +20,6 @@ public class GlobalSeller : MonoBehaviour {
     public static int SellerSPS; //sps of seller
     public static int SellerRate = 1; //rate that seller sells at
 
-    public static bool turnOffButton = false;
-
     void Update () {
         SellerValue = 20 * Math.Pow(10, SellerLevel);
         currentMoney = GlobalMoney.MoneyCount;
@@ -46,10 +44,5 @@ public class GlobalSeller : MonoBehaviour {
             fakeButton.SetActive(true);  //activate fake
         }
 
-        if (turnOffButton == true) {
-            realButton.SetActive(false); //deactivate real
-            fakeButton.SetActive(true);  //activate fake
-            turnOffButton = false;
-        }
 	}
 }

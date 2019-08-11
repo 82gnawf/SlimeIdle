@@ -21,8 +21,6 @@ public class GlobalArcher : MonoBehaviour {
 
     public static double ArcherDPS;
 
-    public static bool turnOffButton = false;
-
     void Update() {
         ArcherValue = 40 * Math.Pow(1.5, ArcherLevel);
         ArcherDamage = 6 * Math.Pow(1.5, ArcherLevel - 1);
@@ -56,11 +54,7 @@ public class GlobalArcher : MonoBehaviour {
             fakeButton.SetActive(true);  //activate fake
         }
 
-        if (turnOffButton == true) {
-            realButton.SetActive(false); //deactivate real
-            fakeButton.SetActive(true);  //activate fake
-            turnOffButton = false;
-        }
+       
     }
 }
 
