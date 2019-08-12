@@ -18,6 +18,10 @@ public class LoadGame : MonoBehaviour{
     public int savedArcher;
     public int savedWarrior;
     public int savedSeller;
+    public int savedDamage;
+    public int savedRate;
+    public int savedCrit;
+    public int savedCritRate;
     public int savedHp;
     public int savedTempHp;
     public int savedSpawn;
@@ -50,7 +54,14 @@ public class LoadGame : MonoBehaviour{
         GlobalSeller.SellerLevel = savedSeller;
 
         //sword
-
+        savedDamage = PlayerPrefs.GetInt("SavedDamage");
+        GlobalSword.SwordDamageLevel = savedDamage;
+        savedRate = PlayerPrefs.GetInt("SavedRate");
+        GlobalSword.SwordRateLevel = savedDamage;
+        savedCrit = PlayerPrefs.GetInt("SavedCrit");
+        GlobalSword.SwordCritLevel = savedDamage;
+        savedCritRate = PlayerPrefs.GetInt("SavedCritRate");
+        GlobalSword.SwordCritRateLevel = savedDamage;
 
         //hp stuff
         savedHp = PlayerPrefs.GetInt("SavedHp");
