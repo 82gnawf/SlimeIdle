@@ -35,6 +35,7 @@ public class LoadGame : MonoBehaviour{
         GlobalSlime.blueSlimeCount = blueSavedSlimes;
         redSavedSlimes = PlayerPrefs.GetInt("redSavedSlimes");
         GlobalSlime.redSlimeCount = redSavedSlimes;
+
         savedMoney = PlayerPrefs.GetInt("SavedMoney");
         GlobalMoney.MoneyCount = savedMoney;
 
@@ -47,6 +48,9 @@ public class LoadGame : MonoBehaviour{
         GlobalWarrior.WarriorLevel = savedWarrior;
         savedSeller = PlayerPrefs.GetInt("SavedSeller");
         GlobalSeller.SellerLevel = savedSeller;
+
+        //sword
+
 
         //hp stuff
         savedHp = PlayerPrefs.GetInt("SavedHp");

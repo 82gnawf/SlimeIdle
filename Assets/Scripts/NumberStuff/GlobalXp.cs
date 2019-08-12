@@ -33,6 +33,12 @@ public class GlobalXp : MonoBehaviour
             case 3:
                 SlimeLevelDisplay.GetComponent<Text>().text = "Red Slime - Level: " + SlimeLevel;
                 break;
+            case 4:
+                SlimeLevelDisplay.GetComponent<Text>().text = "Yellow Slime - Level: " + SlimeLevel;
+                break;
+            case 5:
+                SlimeLevelDisplay.GetComponent<Text>().text = "Orange Slime - Level: " + SlimeLevel;
+                break;
         }
 
         SlimeLevel = LevelCount;

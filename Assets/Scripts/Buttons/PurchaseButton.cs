@@ -43,17 +43,21 @@ public class PurchaseButton : MonoBehaviour {
     //sword
     public void UpgradeDamage() {
         GlobalSword.SwordDamageLevel += 1;
+        GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalSword.DamageCost);
     }
 
     public void UpgradeRate(){
         GlobalSword.SwordRateLevel += 1;
+        GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalSword.RateCost);
     }
 
     public void UpgradeCrit() {
         GlobalSword.SwordCritLevel += 1;
+        GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalSword.CritCost);
     }
 
     public void UpgradeCritRaate() {
         GlobalSword.SwordCritRateLevel += 1;
+        GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalSword.CritRateCost);
     }
 }

@@ -16,6 +16,11 @@ public class GlobalSword : MonoBehaviour
     public static double CritCost;
     public static double CritRateCost;
 
+    public static int DisplayDamage;
+    public static int DisplayRate;
+    public static int DisplayCrit;
+    public static int DisplayCritRate;
+
     public static int SwordDamageLevel = 1;
     public static int SwordRateLevel = 1;
     public static int SwordCritLevel = 1;
@@ -59,20 +64,25 @@ public class GlobalSword : MonoBehaviour
         CritCost = 200 * Math.Pow(1.2, SwordCritLevel - 1);
         CritRateCost = 500 * Math.Pow(1.2, SwordCritRateLevel - 1);
 
-        fakeDamageText.GetComponent<Text>().text = "Upgrade DMG: $" + DamageCost;
-        realDamageText.GetComponent<Text>().text = "Upgrade DMG: $" + DamageCost;
+        DisplayDamage = Convert.ToInt32(DamageCost);
+        DisplayRate = Convert.ToInt32(RateCost);
+        DisplayCrit = Convert.ToInt32(CritCost);
+        DisplayCritRate = Convert.ToInt32(CritRateCost);
+
+        fakeDamageText.GetComponent<Text>().text = "Upgrade DMG: $" + DisplayDamage;
+        realDamageText.GetComponent<Text>().text = "Upgrade DMG: $" + DisplayDamage;
         DamageStat.GetComponent<Text>().text = "DMG: " + SwordDamage;
 
-        fakeRateText.GetComponent<Text>().text = "Upgrade Hit Rate: $" + RateCost;
-        realRateText.GetComponent<Text>().text = "Upgrade Hit Rate: $" + RateCost;
+        fakeRateText.GetComponent<Text>().text = "Upgrade Hit Rate: $" + DisplayRate;
+        realRateText.GetComponent<Text>().text = "Upgrade Hit Rate: $" + DisplayRate;
         RateStat.GetComponent<Text>().text = "Hit Rate: " + SwordRate;
 
-        fakeCritText.GetComponent<Text>().text = "Upgrade Crit. DMG: $" + CritCost;
-        realCritText.GetComponent<Text>().text = "Upgrade Crit. DMG: $" + CritCost;
+        fakeCritText.GetComponent<Text>().text = "Upgrade Crit. DMG: $" + DisplayCrit;
+        realCritText.GetComponent<Text>().text = "Upgrade Crit. DMG: $" + DisplayCrit;
         CritStat.GetComponent<Text>().text = "Crit. DMG: " + SwordCrit;
 
-        fakeCritRateText.GetComponent<Text>().text = "Upgrade Crit. Rate: $" + CritRateCost;
-        realCritRateText.GetComponent<Text>().text = "Upgrade Crit. Rate: $" + CritRateCost;
+        fakeCritRateText.GetComponent<Text>().text = "Upgrade Crit. Rate: $" + DisplayCritRate;
+        realCritRateText.GetComponent<Text>().text = "Upgrade Crit. Rate: $" + DisplayCritRate;
         CritRateStat.GetComponent<Text>().text = "Crit. Rate: " + SwordCritRate;
 
         currentMoney = GlobalMoney.MoneyCount;

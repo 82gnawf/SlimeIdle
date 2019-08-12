@@ -13,14 +13,20 @@ public class GlobalMoney : MonoBehaviour
     public GameObject greenPrice;
     public GameObject bluePrice;
     public GameObject redPrice;
+    public GameObject yellowPrice;
+    public GameObject orangePrice;
 
     public static int greenWorth = 2;
     public static int blueWorth = 4;
-    public static int redWorth = 5;
+    public static int redWorth = 6;
+    public static int yellowWorth = 8;
+    public static int orangeWorth = 10;
 
     public int intGreenWorth;
     public int intBlueWorth;
     public int intRedWorth;
+    public int intYellowWorth;
+    public int intOrangeWorth;
 
     public static int MoneyForPrestige;
 

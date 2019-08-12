@@ -12,6 +12,8 @@ public class GlobalHp : MonoBehaviour {
     public Sprite greenSlime;
     public Sprite blueSlime;
     public Sprite redSlime;
+    public Sprite yellowSlime;
+    public Sprite orangeSlime;
 
     public int slimeRand;  //used for random choosing of slime
 
@@ -43,10 +45,16 @@ public class GlobalHp : MonoBehaviour {
                     GlobalSlime.greenSlimeCount += 1; //increases amount of green slime by 1
                     break;
                 case 2:
-                    GlobalSlime.blueSlimeCount += 1; //increases amount of green slime by 1
+                    GlobalSlime.blueSlimeCount += 1; 
                     break;
                 case 3:
-                    GlobalSlime.redSlimeCount += 1; //increases amount of green slime by 1
+                    GlobalSlime.redSlimeCount += 1; 
+                    break;
+                case 4:
+                    GlobalSlime.yellowSlimeCount += 1; 
+                    break;
+                case 5:
+                    GlobalSlime.orangeSlimeCount += 1; 
                     break;
             }
 
@@ -120,6 +128,51 @@ public class GlobalHp : MonoBehaviour {
                     n = 1;
                 }
                 break;
+            case 8:
+                if (slimeRand > 9) {
+                    n = 4;
+                }
+                else if (slimeRand > 6 && slimeRand <= 9) {
+                    n = 3;
+                }
+                else if (slimeRand > 1 && slimeRand <= 6) {
+                    n = 2;
+                }
+                else {
+                    n = 1;
+                }
+                break;
+            case 9:
+                if (slimeRand > 8) {
+                    n = 4;
+                }
+                else if (slimeRand > 5 && slimeRand <= 8) {
+                    n = 3;
+                }
+                else if (slimeRand> 1 && slimeRand <= 6) {
+                    n = 2;
+                }
+                else {
+                    n = 1;
+                }
+                break;
+            case 10:
+                if (slimeRand > 9) {
+                    n = 5;
+                }
+                else if (slimeRand > 6 && slimeRand <= 9) {
+                    n = 4;
+                }
+                else if (slimeRand > 2 && slimeRand <= 6) {
+                    n = 3;
+                }
+                else if (slimeRand == 2) {
+                    n = 2;
+                }
+                else {
+                    n = 1;
+                }
+                break;
         }
         return n;
     }
@@ -136,6 +189,12 @@ public class GlobalHp : MonoBehaviour {
             case 3:
                 SlimeImage.GetComponent<Image>().sprite = redSlime;
                 break;
+            case 4:
+                SlimeImage.GetComponent<Image>().sprite = yellowSlime;
+                break;
+            case 5:
+                SlimeImage.GetComponent<Image>().sprite = orangeSlime;
+                break;
         }
     }
 
@@ -150,6 +209,12 @@ public class GlobalHp : MonoBehaviour {
                 break;
             case 3:
                 x = 20;
+                break;
+            case 4:
+                x = 30;
+                break;
+            case 5:
+                x = 50;
                 break;
         }
         return x;

@@ -16,17 +16,23 @@ public class SaveGame : MonoBehaviour {
 
     IEnumerator SaveValues() {
 
+        //currency
         PlayerPrefs.SetInt("greenSavedSlimes", GlobalSlime.greenSlimeCount);
         PlayerPrefs.SetInt("blueSavedSlimes", GlobalSlime.blueSlimeCount);
         PlayerPrefs.SetInt("redSavedSlimes", GlobalSlime.redSlimeCount);
         PlayerPrefs.SetInt("SavedMoney", GlobalMoney.MoneyCount);
+        //units
         PlayerPrefs.SetInt("SavedFigther", GlobalFighter.FighterLevel);
         PlayerPrefs.SetInt("SavedArcher", GlobalArcher.ArcherLevel);
         PlayerPrefs.SetInt("SavedWarrior", GlobalWarrior.WarriorLevel);
         PlayerPrefs.SetInt("SavedSeller", GlobalSeller.SellerLevel);
+        //sword
+
+        //hp
         PlayerPrefs.SetInt("SavedHp", Convert.ToInt32(GlobalHp.SlimeHp));
         PlayerPrefs.SetInt("SavedTempHp", Convert.ToInt32(GlobalHp.TempHp));
         PlayerPrefs.SetInt("SavedSpawn", GlobalHp.slimeSpawn);
+        //xp
         PlayerPrefs.SetInt("SavedXpCount", GlobalXp.XpCount);
         PlayerPrefs.SetInt("SavedLevelCount", GlobalXp.LevelCount);
 

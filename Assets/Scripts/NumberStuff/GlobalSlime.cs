@@ -23,6 +23,18 @@ public class GlobalSlime : MonoBehaviour
     public static int redSlimeCount;
     public int internalRedSlimeCount;
 
+    //yellow 
+    public GameObject YellowSlimeDisplay;
+
+    public static int yellowSlimeCount;
+    public int internalYellowSlimeCount;
+
+    //orange 
+    public GameObject OrangeSlimeDisplay;
+
+    public static int orangeSlimeCount;
+    public int internalOrangeSlimeCount;
+
     private void Update() {
         internalGreenSlimeCount = greenSlimeCount;
         GreenSlimeDisplay.GetComponent<Text>().text = "X " + internalGreenSlimeCount;
@@ -30,6 +42,10 @@ public class GlobalSlime : MonoBehaviour
         BlueSlimeDisplay.GetComponent<Text>().text = "X " + internalBlueSlimeCount;
         internalRedSlimeCount = redSlimeCount;
         RedSlimeDisplay.GetComponent<Text>().text = "X " + internalRedSlimeCount;
+        internalYellowSlimeCount = yellowSlimeCount;
+        YellowSlimeDisplay.GetComponent<Text>().text = "X " + internalYellowSlimeCount;
+        internalOrangeSlimeCount = orangeSlimeCount;
+        OrangeSlimeDisplay.GetComponent<Text>().text = "X " + internalOrangeSlimeCount;
     }
 
 
