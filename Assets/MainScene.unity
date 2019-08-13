@@ -6359,7 +6359,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &657236957
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10632,8 +10632,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020564289}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 400, y: 850, z: 0}
-  m_LocalScale: {x: 110, y: 110, z: 1}
+  m_LocalPosition: {x: 400, y: 900, z: 0}
+  m_LocalScale: {x: 80, y: 80, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -22839,6 +22839,8 @@ MonoBehaviour:
   greenSavedSlimes: 0
   blueSavedSlimes: 0
   redSavedSlimes: 0
+  yellowSavedSlimes: 0
+  orangeSavedSlimes: 0
   savedMoney: 0
   savedFighter: 0
   savedArcher: 0
