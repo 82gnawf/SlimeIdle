@@ -13,6 +13,8 @@ public class LoadGame : MonoBehaviour{
     public int greenSavedSlimes;
     public int blueSavedSlimes;
     public int redSavedSlimes;
+    public int yellowSavedSlimes;
+    public int orangeSavedSlimes;
     public int savedMoney;
     public int savedFighter;
     public int savedArcher;
@@ -39,7 +41,10 @@ public class LoadGame : MonoBehaviour{
         GlobalSlime.blueSlimeCount = blueSavedSlimes;
         redSavedSlimes = PlayerPrefs.GetInt("redSavedSlimes");
         GlobalSlime.redSlimeCount = redSavedSlimes;
-
+        yellowSavedSlimes = PlayerPrefs.GetInt("yellowSavedSlimes");
+        GlobalSlime.yellowSlimeCount = yellowSavedSlimes;
+        orangeSavedSlimes = PlayerPrefs.GetInt("orangeSavedSlimes");
+        GlobalSlime.orangeSlimeCount = orangeSavedSlimes;
         savedMoney = PlayerPrefs.GetInt("SavedMoney");
         GlobalMoney.MoneyCount = savedMoney;
 

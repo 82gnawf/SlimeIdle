@@ -3877,7 +3877,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920151}
-        m_MethodName: RedButtonClick10
+        m_MethodName: OrangeButtonClick10
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8566,7 +8566,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920151}
-        m_MethodName: RedButtonClickMax
+        m_MethodName: YellowButtonClickMax
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8852,7 +8852,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920151}
-        m_MethodName: RedButtonClick10
+        m_MethodName: YellowButtonClick10
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12649,7 +12649,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920151}
-        m_MethodName: RedButtonClick100
+        m_MethodName: OrangeButtonClick100
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12994,7 +12994,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920151}
-        m_MethodName: RedButtonClick100
+        m_MethodName: YellowButtonClick100
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13200,7 +13200,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920151}
-        m_MethodName: RedButtonClick1
+        m_MethodName: OrangeButtonClick1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17218,7 +17218,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920151}
-        m_MethodName: RedButtonClick1
+        m_MethodName: YellowButtonClick1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18444,7 +18444,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920151}
-        m_MethodName: RedButtonClickMax
+        m_MethodName: OrangeButtonClickMax
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22844,6 +22844,10 @@ MonoBehaviour:
   savedArcher: 0
   savedWarrior: 0
   savedSeller: 0
+  savedDamage: 0
+  savedRate: 0
+  savedCrit: 0
+  savedCritRate: 0
   savedHp: 0
   savedTempHp: 0
   savedSpawn: 0

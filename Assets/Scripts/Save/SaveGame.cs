@@ -20,6 +20,8 @@ public class SaveGame : MonoBehaviour {
         PlayerPrefs.SetInt("greenSavedSlimes", GlobalSlime.greenSlimeCount);
         PlayerPrefs.SetInt("blueSavedSlimes", GlobalSlime.blueSlimeCount);
         PlayerPrefs.SetInt("redSavedSlimes", GlobalSlime.redSlimeCount);
+        PlayerPrefs.SetInt("yellowSavedSlimes", GlobalSlime.yellowSlimeCount);
+        PlayerPrefs.SetInt("orangeSavedSlimes", GlobalSlime.orangeSlimeCount);
         PlayerPrefs.SetInt("SavedMoney", GlobalMoney.MoneyCount);
         //units
         PlayerPrefs.SetInt("SavedFigther", GlobalFighter.FighterLevel);
