@@ -9,6 +9,10 @@ public class PurchaseButton : MonoBehaviour {
     public GameObject AutoDamageArcher;
     public GameObject AutoDamageWarrior;
     public GameObject GreenAutoSell;
+    public GameObject BlueAutoSell;
+    public GameObject RedAutoSell;
+    public GameObject YellowAutoSell;
+    public GameObject OrangeAutoSell;
 
     //attackers
     public void StartAutoDamageFigther() {
@@ -38,6 +42,34 @@ public class PurchaseButton : MonoBehaviour {
         GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalGreenSeller.SellerValue);
         GlobalGreenSeller.SellerLevel += 1;
         GlobalGreenSeller.SellerSPS += 1;
+    }
+
+    public void StartBlueAutoSell() {
+        BlueAutoSell.SetActive(true);
+        GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalBlueSeller.SellerValue);
+        GlobalBlueSeller.SellerLevel += 1;
+        GlobalBlueSeller.SellerSPS += 1;
+    }
+
+    public void StartRedAutoSell() {
+        RedAutoSell.SetActive(true);
+        GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalRedSeller.SellerValue);
+        GlobalRedSeller.SellerLevel += 1;
+        GlobalRedSeller.SellerSPS += 1;
+    }
+
+    public void StartYellowAutoSell() {
+        YellowAutoSell.SetActive(true);
+        GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalYellowSeller.SellerValue);
+        GlobalYellowSeller.SellerLevel += 1;
+        GlobalYellowSeller.SellerSPS += 1;
+    }
+
+    public void StartOrangeAutoSell() {
+        OrangeAutoSell.SetActive(true);
+        GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalOrangeSeller.SellerValue);
+        GlobalOrangeSeller.SellerLevel += 1;
+        GlobalOrangeSeller.SellerSPS += 1;
     }
 
     //sword
