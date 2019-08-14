@@ -4,7 +4,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GlobalSeller : MonoBehaviour {
+public class GlobalGreenSeller : MonoBehaviour {
 
 
     public GameObject fakeButton;

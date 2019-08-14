@@ -19,7 +19,7 @@ public class LoadGame : MonoBehaviour{
     public int savedFighter;
     public int savedArcher;
     public int savedWarrior;
-    public int savedSeller;
+    public int savedGreenSeller;
     public int savedDamage;
     public int savedRate;
     public int savedCrit;
@@ -55,8 +55,8 @@ public class LoadGame : MonoBehaviour{
         GlobalArcher.ArcherLevel = savedArcher;
         savedWarrior = PlayerPrefs.GetInt("SavedWarrior");
         GlobalWarrior.WarriorLevel = savedWarrior;
-        savedSeller = PlayerPrefs.GetInt("SavedSeller");
-        GlobalSeller.SellerLevel = savedSeller;
+        savedGreenSeller = PlayerPrefs.GetInt("SavedGreenSeller");
+        GlobalGreenSeller.SellerLevel = savedGreenSeller;
 
         //sword
         savedDamage = PlayerPrefs.GetInt("SavedDamage");
@@ -107,7 +107,7 @@ public class LoadGame : MonoBehaviour{
         if (GlobalWarrior.WarriorLevel > 0) {
             WarriorAutoDamage.SetActive(true);
         }
-        if (GlobalSeller.SellerLevel > 0) {
+        if (GlobalGreenSeller.SellerLevel > 0) {
             AutoSell.SetActive(true);
         }
 

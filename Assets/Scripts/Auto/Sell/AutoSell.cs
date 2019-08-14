@@ -5,35 +5,34 @@ using UnityEngine;
 
 public class AutoSell : MonoBehaviour {
 
-    public bool SlimeAutoSell = false; //bool for auto sell
-    public static int SlimeSell;
-    public int InternalSell;
+    public bool GreenSlimeAutoSell = false; //bool for green auto sell
+    public int GreenSell;
 
     void Update() {
-        SlimeSell = GlobalSeller.SellerLevel * GlobalSeller.SellerRate; //sells at 1 slime per second
-        InternalSell = SlimeSell;
+        GreenSell = GlobalGreenSeller.SellerLevel * GlobalGreenSeller.SellerRate; //sells at 1 slime per second
 
-        if (SlimeAutoSell == false) {
-            SlimeAutoSell = true;
-            StartCoroutine(SellSlime()); //starts IEnumerator SellSlime()
+        if (GreenSlimeAutoSell == false) {
+            GreenSlimeAutoSell = true;
+            StartCoroutine(SellGreenSlime()); //starts IEnumerator SellSlime()
         }
     }
-    IEnumerator SellSlime() {
-        if (GlobalSlime.greenSlimeCount > 0 && GlobalSlime.greenSlimeCount < InternalSell) {
+
+    IEnumerator SellGreenSlime() {
+        if (GlobalSlime.greenSlimeCount > 0 && GlobalSlime.greenSlimeCount < GreenSell) {
             GlobalMoney.MoneyCount += (2 * GlobalSlime.greenSlimeCount);
             GlobalSlime.greenSlimeCount -= GlobalSlime.greenSlimeCount;
             yield return new WaitForSeconds(1); //waits for (x) seconds
-            SlimeAutoSell = false; //resets the bool
+            GreenSlimeAutoSell = false; //resets the bool
         }
         else if (GlobalSlime.greenSlimeCount > 0) {
-            GlobalSlime.greenSlimeCount -= InternalSell;
-            GlobalMoney.MoneyCount += (2 * InternalSell); //should be value of slime TODO
+            GlobalSlime.greenSlimeCount -= GreenSell;
+            GlobalMoney.MoneyCount += (2 * GreenSell); //should be value of slime TODO
             yield return new WaitForSeconds(1); //waits for (x) seconds
-            SlimeAutoSell = false; //resets the bool
+            GreenSlimeAutoSell = false; //resets the bool
         }
         else {
             yield return new WaitForSeconds(1); //waits for (x) seconds
-            SlimeAutoSell = false; //resets the bool }
+            GreenSlimeAutoSell = false; //resets the bool }
         }
     }
 }

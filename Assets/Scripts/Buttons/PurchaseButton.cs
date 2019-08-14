@@ -8,7 +8,7 @@ public class PurchaseButton : MonoBehaviour {
     public GameObject AutoDamageFighter;
     public GameObject AutoDamageArcher;
     public GameObject AutoDamageWarrior;
-    public GameObject AutoSell;
+    public GameObject GreenAutoSell;
 
     //attackers
     public void StartAutoDamageFigther() {
@@ -33,11 +33,11 @@ public class PurchaseButton : MonoBehaviour {
     }
 
     //sellers
-    public void StartAutoSell() {
-        AutoSell.SetActive(true);
-        GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalSeller.SellerValue);
-        GlobalSeller.SellerLevel += 1;
-        GlobalSeller.SellerSPS += 1;
+    public void StartGreenAutoSell() {
+        GreenAutoSell.SetActive(true);
+        GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalGreenSeller.SellerValue);
+        GlobalGreenSeller.SellerLevel += 1;
+        GlobalGreenSeller.SellerSPS += 1;
     }
 
     //sword
