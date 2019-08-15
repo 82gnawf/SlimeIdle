@@ -53,8 +53,5 @@ public class GlobalArcher : MonoBehaviour {
             realButton.SetActive(false); //deactivate real
             fakeButton.SetActive(true);  //activate fake
         }
-
-       
     }
 }
-

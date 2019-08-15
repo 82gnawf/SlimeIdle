@@ -63,6 +63,8 @@ public class LoadGame : MonoBehaviour{
         GlobalArcher.ArcherLevel = savedArcher;
         savedWarrior = PlayerPrefs.GetInt("SavedWarrior");
         GlobalWarrior.WarriorLevel = savedWarrior;
+
+        //sellers
         savedGreenSeller = PlayerPrefs.GetInt("SavedGreenSeller");
         GlobalGreenSeller.SellerLevel = savedGreenSeller;
         savedBlueSeller = PlayerPrefs.GetInt("SavedBlueSeller");

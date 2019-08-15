@@ -27,6 +27,8 @@ public class SaveGame : MonoBehaviour {
         PlayerPrefs.SetInt("SavedFigther", GlobalFighter.FighterLevel);
         PlayerPrefs.SetInt("SavedArcher", GlobalArcher.ArcherLevel);
         PlayerPrefs.SetInt("SavedWarrior", GlobalWarrior.WarriorLevel);
+
+        //sellers
         PlayerPrefs.SetInt("SavedGreenSeller", GlobalGreenSeller.SellerLevel);
         PlayerPrefs.SetInt("SavedBlueSeller", GlobalBlueSeller.SellerLevel);
         PlayerPrefs.SetInt("SavedRedSeller", GlobalRedSeller.SellerLevel);
