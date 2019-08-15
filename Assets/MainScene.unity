@@ -5514,6 +5514,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SwordSwing: {fileID: 1755907189}
+  CritRand: 0
+  HitRand: 0
+  CritRate: 0
+  HitRate: 0
 --- !u!4 &511920150
 Transform:
   m_ObjectHideFlags: 0
@@ -28052,6 +28056,8 @@ MonoBehaviour:
   FighterAutoDamage: {fileID: 1531817024}
   ArcherAutoDamage: {fileID: 364044120}
   WarriorAutoDamage: {fileID: 1758347633}
+  KnightAutoDamage: {fileID: 177889288}
+  AssassinAutoDamage: {fileID: 1572184882}
   GreenAutoSell: {fileID: 1794464131}
   BlueAutoSell: {fileID: 1999952075}
   RedAutoSell: {fileID: 635899177}
@@ -28066,6 +28072,8 @@ MonoBehaviour:
   savedFighter: 0
   savedArcher: 0
   savedWarrior: 0
+  savedKnight: 0
+  savedAssassin: 0
   savedGreenSeller: 0
   savedBlueSeller: 0
   savedRedSeller: 0
