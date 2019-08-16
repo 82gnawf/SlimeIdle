@@ -14,7 +14,13 @@ public class DamageButton : MonoBehaviour {
     public double CritRate;
     public double HitRate;
 
-	public void ButtonClick () {
+    public void Start() {
+
+        DamageAnimController.Initialize();
+
+    }
+
+    public void ButtonClick () {
 
         CritRate = GlobalSword.SwordCritRate;
         HitRate = GlobalSword.SwordRate;
@@ -24,20 +30,25 @@ public class DamageButton : MonoBehaviour {
         HitRand = randomHR.Next(1, 101); 
         SwordSwing.GetComponent<Animation>().Play("SwordAnim");
 
+        /*
         if (HitRand <= HitRate) {
             if (CritRand <= CritRate) {
                 GlobalHp.TempHp -= GlobalSword.SwordCrit;
+                DamageAnimController.CreateDamageText(GlobalSword.SwordCrit, );
             }
             else {
                 GlobalHp.TempHp -= GlobalSword.SwordDamage;
+                DamageAnimController.CreateDamageText(GlobalSword.SwordDamage, );
             }
         }
         else{
             //missedAnim;
         }
+        */
 
 
         GlobalHp.TempHp -= GlobalSword.SwordDamage;
+        DamageAnimController.CreateDamageText(GlobalSword.SwordDamage.ToString(), transform);
 
     }
 }

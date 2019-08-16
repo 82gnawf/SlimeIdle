@@ -27886,6 +27886,7 @@ GameObject:
   - component: {fileID: 2132057219}
   - component: {fileID: 2132057218}
   - component: {fileID: 2132057222}
+  - component: {fileID: 2132057229}
   m_Layer: 0
   m_Name: MechanicsObject
   m_TagString: Untagged
@@ -28273,6 +28274,18 @@ MonoBehaviour:
   KnightStat: {fileID: 1111545747}
   currentMoney: 0
   displayKnightValue: 0
+--- !u!114 &2132057229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2132057210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa6bf52d6cda794fab297f0a75a96e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2136288728
 GameObject:
   m_ObjectHideFlags: 0
