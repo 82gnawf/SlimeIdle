@@ -20,6 +20,12 @@ public class GlobalHp : MonoBehaviour {
     public static int slimeSpawn; //what slime will be spawned
     public static int typeHp = 10;
 
+    public static double SlimeCritDodge;
+    public static double SlimeDodge;
+
+    public int dodgeChance = 0;
+    public int critDodgeChance = 0;
+
     public static double SlimeHp = (typeHp * Math.Pow(1.1, GlobalXp.LevelCount - 1)); //real hp based on level
     public static double TempHp; //honestly don't know if i need this lol
     public int InternalHp;
@@ -45,16 +51,16 @@ public class GlobalHp : MonoBehaviour {
                     GlobalSlime.greenSlimeCount += 1; //increases amount of green slime by 1
                     break;
                 case 2:
-                    GlobalSlime.blueSlimeCount += 1; 
+                    GlobalSlime.blueSlimeCount += 1;
                     break;
                 case 3:
-                    GlobalSlime.redSlimeCount += 1; 
+                    GlobalSlime.redSlimeCount += 1;
                     break;
                 case 4:
-                    GlobalSlime.yellowSlimeCount += 1; 
+                    GlobalSlime.yellowSlimeCount += 1;
                     break;
                 case 5:
-                    GlobalSlime.orangeSlimeCount += 1; 
+                    GlobalSlime.orangeSlimeCount += 1;
                     break;
             }
 
@@ -67,10 +73,49 @@ public class GlobalHp : MonoBehaviour {
             slimeSpawn = SlimeSpawn(GlobalXp.LevelCount);
             SlimeSprite();
             typeHp = GenerateHp(slimeSpawn);
+            dodgeChance = dodgeCheck(slimeSpawn);
+            critDodgeChance = critDodgeCheck(slimeSpawn);
+
+            SlimeDodge = dodgeChance;
+            SlimeCritDodge = critDodgeChance;
 
             SlimeHp = (typeHp * Math.Pow(1.1, GlobalXp.LevelCount - 1));
             TempHp = SlimeHp; //resets slime hp
         }
+    }
+
+    public static int dodgeCheck (int k) { //chance of slime dodging normal attack
+        switch (k) {
+            case 1:
+                return 0;
+            case 2:
+                return 0;
+            case 3:
+                return 10;
+            case 4:
+                return 0;
+            case 5:
+                return 20;
+            
+        }
+        return 0;
+    }
+
+    public static int critDodgeCheck(int k) { //chance of slime dodging crit attack
+        switch (k) {
+            case 1:
+                return 0;
+            case 2:
+                return 0;
+            case 3:
+                return 0;
+            case 4:
+                return 0;
+            case 5:
+                return 0;
+
+        }
+        return 0;
     }
 
     //random gens slime type; 1 = green, 2 = blue, etc.

@@ -11,9 +11,9 @@ public class DamageAnimController : MonoBehaviour {
     public static void Initialize() {
 
         canvas = GameObject.Find("Canvas");
-        DamageText = Resources.Load<GameObject>("Prefabs/PopupDamageParent").GetComponent<DamageAnim>();
-        if (!DamageText) {
-            DamageText = Resources.Load<GameObject>("Prefabs/PopupDamageParent").GetComponent<DamageAnim>();
+        DamageText = Resources.Load<DamageAnim>("Prefabs/PopupDamageParent");
+        if (DamageText == null) {
+            DamageText = Resources.Load<DamageAnim>("Prefabs/PopupDamageParent");
         }
         Debug.Log(DamageText);
 

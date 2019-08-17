@@ -23,16 +23,16 @@ public class GlobalRedSeller : MonoBehaviour {
     void Update () {
         SellerValue = 60 * Math.Pow(10, SellerLevel);
         currentMoney = GlobalMoney.MoneyCount;
-        SellerStat.GetComponent<Text>().text = "Seller Lvl." + SellerLevel + " (" + SellerSPS + " SPS)";
+        SellerStat.GetComponent<Text>().text = "Red Seller Lvl." + SellerLevel + " (" + SellerSPS + " SPS)";
         displaySellerValue = Convert.ToInt32(SellerValue);
 
         if (SellerLevel == 0) { //lvl statements
-            fakeText.GetComponent<Text>().text = "Hire Seller - $" + displaySellerValue; //button display
-            realText.GetComponent<Text>().text = "Hire Seller - $" + displaySellerValue;
+            fakeText.GetComponent<Text>().text = "Hire Red Seller - $" + displaySellerValue; //button display
+            realText.GetComponent<Text>().text = "Hire Red Seller - $" + displaySellerValue;
         }
         else {
-            fakeText.GetComponent<Text>().text = "Upgrade Seller - $" + displaySellerValue;
-            realText.GetComponent<Text>().text = "Upgrade Seller - $" + displaySellerValue;
+            fakeText.GetComponent<Text>().text = "Upgrade Red Seller - $" + displaySellerValue;
+            realText.GetComponent<Text>().text = "Upgrade Red Seller - $" + displaySellerValue;
         }
 
         if (currentMoney >= SellerValue) {
