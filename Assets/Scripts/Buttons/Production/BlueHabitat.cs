@@ -4,53 +4,53 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-public class GreenHabitat : MonoBehaviour {
+public class BlueHabitat : MonoBehaviour {
     // Start is called before the first frame update
     public GameObject fakeButton;
     public GameObject realButton;
     public GameObject fakeText;
     public GameObject realText;
-    public GameObject GreenHabStat;
+    public GameObject BlueHabStat;
 
     public int currentMoney;
     public static int unlockValue;
     public static int currentSlime;
 
-    public static int GreenHabValue; //cost 
-    public int displayGreenHabValue; //god im being trolled
+    public static int BlueHabValue; //cost 
+    public int displayBlueHabValue; //god im being trolled
 
-    public static int GreenHabLevel; //level
-    public static int GreenHabProduced; //slime produced
+    public static int BlueHabLevel; //level
+    public static int BlueHabProduced; //slime produced
 
-    public static double GreenHabPPS;
+    public static double BlueHabPPS;
 
     void Update() {
         unlockValue = 10000;
-        GreenHabValue = 10;
-        GreenHabProduced = GreenHabLevel;
-        GreenHabPPS = GreenHabProduced/10;
+        BlueHabValue = 10;
+        BlueHabProduced = BlueHabLevel;
+        BlueHabPPS = BlueHabProduced / 10;
         currentMoney = GlobalMoney.MoneyCount;
-        currentSlime = GlobalSlime.greenSlimeCount;
+        currentSlime = GlobalSlime.blueSlimeCount;
 
-        if (GreenHabLevel == 0) {
-            GreenHabStat.GetComponent<Text>().text = "Habitat Locked";
+        if (BlueHabLevel == 0) {
+            BlueHabStat.GetComponent<Text>().text = "Habitat Locked";
         }
         else {
-            GreenHabStat.GetComponent<Text>().text = "Green Habitat: " + GreenHabLevel + " (" + Convert.ToInt32(GreenHabPPS) + " PPS)";
+            BlueHabStat.GetComponent<Text>().text = "Blue Habitat: " + BlueHabLevel + " (" + Convert.ToInt32(BlueHabPPS) + " PPS)";
         }
 
-        displayGreenHabValue = Convert.ToInt32(GreenHabValue);
+        displayBlueHabValue = Convert.ToInt32(BlueHabValue);
 
-        if (GreenHabLevel == 0) { //lvl statements
+        if (BlueHabLevel == 0) { //lvl statements
             fakeText.GetComponent<Text>().text = "Unlock Habitat - $" + unlockValue; //button display
             realText.GetComponent<Text>().text = "Unlock Habitat - $" + unlockValue;
         }
         else {
-            fakeText.GetComponent<Text>().text = "Produce Slime - " + displayGreenHabValue + "Green Slimes";
-            realText.GetComponent<Text>().text = "Produce Slime - " + displayGreenHabValue + "Green Slimes";
+            fakeText.GetComponent<Text>().text = "Produce Slime - " + displayBlueHabValue + "Blue Slimes";
+            realText.GetComponent<Text>().text = "Produce Slime - " + displayBlueHabValue + "Blue Slimes";
         }
 
-        if (GreenHabLevel < 1) {
+        if (BlueHabLevel < 1) {
             if (currentMoney >= unlockValue) {
                 fakeButton.SetActive(false); //deactivate fake
                 realButton.SetActive(true);  //activate real
@@ -61,7 +61,7 @@ public class GreenHabitat : MonoBehaviour {
             }
         }
         else {
-            if (currentSlime >= GreenHabValue) {
+            if (currentSlime >= BlueHabValue) {
                 fakeButton.SetActive(false); //deactivate fake
                 realButton.SetActive(true);  //activate real
             }
@@ -70,11 +70,13 @@ public class GreenHabitat : MonoBehaviour {
                 fakeButton.SetActive(true);  //activate fake
             }
         }
-        
+
 
 
     }
 }
+
+
 
 
 

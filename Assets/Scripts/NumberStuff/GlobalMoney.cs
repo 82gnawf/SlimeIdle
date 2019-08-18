@@ -42,5 +42,11 @@ public class GlobalMoney : MonoBehaviour
 
         intRedWorth = redWorth;
         redPrice.GetComponent<Text>().text = "Value: $" + intRedWorth;
+
+        intYellowWorth = yellowWorth;
+        yellowPrice.GetComponent<Text>().text = "Value: $" + intYellowWorth;
+
+        intOrangeWorth = orangeWorth;
+        orangePrice.GetComponent<Text>().text = "Value: $" + intOrangeWorth;
     }
 }

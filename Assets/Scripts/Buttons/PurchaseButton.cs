@@ -15,6 +15,11 @@ public class PurchaseButton : MonoBehaviour {
     public GameObject RedAutoSell;
     public GameObject YellowAutoSell;
     public GameObject OrangeAutoSell;
+    public GameObject AutoGreenProd;
+    public GameObject AutoBlueProd;
+    public GameObject AutoRedProd;
+    public GameObject AutoYellowProd;
+    public GameObject AutoOrangeProd;
 
     //attackers
     public void StartAutoDamageFigther() {
@@ -110,13 +115,59 @@ public class PurchaseButton : MonoBehaviour {
     }
 
     //production
-    public void UpgradeGreenHab() {
-        GreenHabitat.GreenHabLevel += 1;
+    public void StartGreenProd() {
         if (GreenHabitat.GreenHabLevel > 0) {
             GlobalSlime.greenSlimeCount -= GreenHabitat.GreenHabValue;
         }
         else {
             GlobalMoney.MoneyCount -= GreenHabitat.unlockValue;
         }
+        GreenHabitat.GreenHabLevel += 1;
     }
+
+    public void StartBlueProd() {
+        if (BlueHabitat.BlueHabLevel > 0) {
+            GlobalSlime.blueSlimeCount -= BlueHabitat.BlueHabValue;
+        }
+        else {
+            GlobalMoney.MoneyCount -= BlueHabitat.unlockValue;
+        }
+        BlueHabitat.BlueHabLevel += 1;
+    }
+
+    public void StartRedProd() {
+        if (RedHabitat.RedHabLevel > 0) {
+            GlobalSlime.redSlimeCount -= RedHabitat.RedHabValue;
+        }
+        else {
+            GlobalMoney.MoneyCount -= RedHabitat.unlockValue;
+        }
+        RedHabitat.RedHabLevel += 1;
+    }
+
+    public void StartYellowProd() {
+        if (YellowHabitat.YellowHabLevel > 0) {
+            GlobalSlime.yellowSlimeCount -= YellowHabitat.YellowHabValue;
+        }
+        else {
+            GlobalMoney.MoneyCount -= YellowHabitat.unlockValue;
+        }
+        YellowHabitat.YellowHabLevel += 1;
+    }
+
+    public void StartOrangeProd() {
+        if (OrangeHabitat.OrangeHabLevel > 0) {
+            GlobalSlime.orangeSlimeCount -= OrangeHabitat.OrangeHabValue;
+        }
+        else {
+            GlobalMoney.MoneyCount -= OrangeHabitat.unlockValue;
+        }
+        OrangeHabitat.OrangeHabLevel += 1;
+    }
+
+
+
+
+
+
 }

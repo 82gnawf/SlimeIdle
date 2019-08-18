@@ -15,7 +15,7 @@ public class GreenSlimeProduction : MonoBehaviour
     }
     IEnumerator ProduceSlime() {
 
-        GlobalSlime.greenSlimeCount ++;
+        GlobalSlime.greenSlimeCount += GreenHabitat.GreenHabLevel;
         yield return new WaitForSeconds(10); //waits for (x) seconds
         GreenHabAutoProduce = false; //resets the bool
     }

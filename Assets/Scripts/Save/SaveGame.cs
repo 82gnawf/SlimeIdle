@@ -42,10 +42,15 @@ public class SaveGame : MonoBehaviour {
         PlayerPrefs.SetInt("SavedRate", GlobalSword.SwordRateLevel);
         PlayerPrefs.SetInt("SavedCrit", GlobalSword.SwordCritLevel);
         PlayerPrefs.SetInt("SavedCritRate", GlobalSword.SwordCritRateLevel);
+
+        //prod
+        PlayerPrefs.SetInt("SavedGreenHab", GreenHabitat.GreenHabLevel);
+
         //hp
         PlayerPrefs.SetInt("SavedHp", Convert.ToInt32(GlobalHp.SlimeHp));
         PlayerPrefs.SetInt("SavedTempHp", Convert.ToInt32(GlobalHp.TempHp));
         PlayerPrefs.SetInt("SavedSpawn", GlobalHp.slimeSpawn);
+
         //xp
         PlayerPrefs.SetInt("SavedXpCount", GlobalXp.XpCount);
         PlayerPrefs.SetInt("SavedLevelCount", GlobalXp.LevelCount);

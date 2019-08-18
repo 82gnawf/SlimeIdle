@@ -16,6 +16,8 @@ public class LoadGame : MonoBehaviour{
     public GameObject YellowAutoSell;
     public GameObject OrangeAutoSell;
 
+    public GameObject GreenSlimeProduction;
+
     public int greenSavedSlimes;
     public int blueSavedSlimes;
     public int redSavedSlimes;
@@ -36,6 +38,7 @@ public class LoadGame : MonoBehaviour{
     public int savedRate;
     public int savedCrit;
     public int savedCritRate;
+    public int savedGreenHab;
     public int savedHp;
     public int savedTempHp;
     public int savedSpawn;
@@ -114,6 +117,10 @@ public class LoadGame : MonoBehaviour{
             GlobalSword.SwordCritRateLevel = savedCritRate;
         }
 
+        //prod
+        savedGreenHab = PlayerPrefs.GetInt("SavedGreenHab");
+        GreenHabitat.GreenHabLevel = savedGreenHab;
+
         //hp stuff
         savedHp = PlayerPrefs.GetInt("SavedHp");
         if (savedHp == 0) { //wont spawn at level 0 anymore
@@ -143,7 +150,7 @@ public class LoadGame : MonoBehaviour{
         savedXpCount = PlayerPrefs.GetInt("SavedXpCount");
         GlobalXp.XpCount = savedXpCount;
 
-        //autodmg checker
+        //auto checker
         if (GlobalFighter.FighterLevel > 0) { 
             FighterAutoDamage.SetActive(true);
         }
@@ -174,7 +181,6 @@ public class LoadGame : MonoBehaviour{
         if (GlobalOrangeSeller.SellerLevel > 0) {
             OrangeAutoSell.SetActive(true);
         }
-
     }
 
 }
