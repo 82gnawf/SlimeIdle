@@ -108,4 +108,15 @@ public class PurchaseButton : MonoBehaviour {
         GlobalSword.SwordCritRateLevel += 1;
         GlobalMoney.MoneyCount -= Convert.ToInt32(GlobalSword.CritRateCost);
     }
+
+    //production
+    public void UpgradeGreenHab() {
+        GreenHabitat.GreenHabLevel += 1;
+        if (GreenHabitat.GreenHabLevel > 0) {
+            GlobalSlime.greenSlimeCount -= GreenHabitat.GreenHabValue;
+        }
+        else {
+            GlobalMoney.MoneyCount -= GreenHabitat.unlockValue;
+        }
+    }
 }

@@ -93,7 +93,7 @@ public class GlobalHp : MonoBehaviour {
             case 3:
                 return 10;
             case 4:
-                return 0;
+                return 10;
             case 5:
                 return 20;
             

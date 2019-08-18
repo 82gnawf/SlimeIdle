@@ -18,6 +18,9 @@ public class GlobalArcher : MonoBehaviour {
     public int displayArcherValue; //god im being trolled
     public static int ArcherLevel; //level of fighter
     public static double ArcherDamage; //damage dealt
+    public static int ArcherRate;
+    public static int ArcherCrit;
+    public static int ArcherCritRate;
 
     public static double ArcherDPS;
 
