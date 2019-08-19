@@ -45,6 +45,10 @@ public class SaveGame : MonoBehaviour {
 
         //prod
         PlayerPrefs.SetInt("SavedGreenHab", GreenHabitat.GreenHabLevel);
+        PlayerPrefs.SetInt("SavedBlueHab", BlueHabitat.BlueHabLevel);
+        PlayerPrefs.SetInt("SavedRedHab", RedHabitat.RedHabLevel);
+        PlayerPrefs.SetInt("SavedYellowHab", YellowHabitat.YellowHabLevel);
+        PlayerPrefs.SetInt("SavedOrangeHab", OrangeHabitat.OrangeHabLevel);
 
         //hp
         PlayerPrefs.SetInt("SavedHp", Convert.ToInt32(GlobalHp.SlimeHp));

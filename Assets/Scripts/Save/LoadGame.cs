@@ -39,6 +39,10 @@ public class LoadGame : MonoBehaviour{
     public int savedCrit;
     public int savedCritRate;
     public int savedGreenHab;
+    public int savedBlueHab;
+    public int savedRedHab;
+    public int savedYellowHab;
+    public int savedOrangeHab;
     public int savedHp;
     public int savedTempHp;
     public int savedSpawn;
@@ -120,6 +124,14 @@ public class LoadGame : MonoBehaviour{
         //prod
         savedGreenHab = PlayerPrefs.GetInt("SavedGreenHab");
         GreenHabitat.GreenHabLevel = savedGreenHab;
+        savedBlueHab = PlayerPrefs.GetInt("SavedBlueHab");
+        BlueHabitat.BlueHabLevel = savedBlueHab;
+        savedRedHab = PlayerPrefs.GetInt("SavedRedHab");
+        RedHabitat.RedHabLevel = savedRedHab;
+        savedYellowHab = PlayerPrefs.GetInt("SavedYellowHab");
+        YellowHabitat.YellowHabLevel = savedYellowHab;
+        savedOrangeHab = PlayerPrefs.GetInt("SavedOrangeHab");
+        OrangeHabitat.OrangeHabLevel = savedOrangeHab;
 
         //hp stuff
         savedHp = PlayerPrefs.GetInt("SavedHp");
