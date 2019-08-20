@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6109317593908850265}
   - component: {fileID: 6911948142739766744}
   - component: {fileID: 7496851128461973727}
+  - component: {fileID: 188273182315664572}
   m_Layer: 5
   m_Name: DamageText
   m_TagString: Untagged
@@ -99,6 +100,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &188273182315664572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4611386073988780147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.78431374}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &5818013612804353960
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +128,7 @@ GameObject:
   - component: {fileID: 8250172334225919920}
   - component: {fileID: 7712461416342894245}
   m_Layer: 5
-  m_Name: 'DamageTextParent '
+  m_Name: DamageTextParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
