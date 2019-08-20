@@ -27,8 +27,6 @@ public class DamageButton : MonoBehaviour {
         CritRate = GlobalSword.SwordCritRate * (1 - GlobalHp.SlimeCritDodge/100);
         HitRate = GlobalSword.SwordRate * (1 - GlobalHp.SlimeDodge/100);
 
-        Debug.Log(HitRate);
-
         System.Random randomCR = new System.Random();
         System.Random randomHR = new System.Random();
         CritRand = randomCR.Next(1, 101); //between 1 and 100 
@@ -38,11 +36,11 @@ public class DamageButton : MonoBehaviour {
         if (HitRand <= HitRate) {
             if (CritRand <= CritRate) {
                 GlobalHp.TempHp -= GlobalSword.SwordCrit;
-                //DamageAnimController.CreateDamageText(GlobalSword.SwordCrit.ToString(), transform);
+                DamageAnimController.CreateDamageText(GlobalSword.SwordCrit.ToString(), transform);
             }
             else {
                 GlobalHp.TempHp -= GlobalSword.SwordDamage;
-                //DamageAnimController.CreateDamageText(GlobalSword.SwordDamage.ToString(), transform);
+                DamageAnimController.CreateDamageText(GlobalSword.SwordDamage.ToString(), transform);
             }
         }
         else{

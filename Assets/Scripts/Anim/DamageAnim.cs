@@ -11,6 +11,7 @@ public class DamageAnim : MonoBehaviour {
     void OnEnable() {
 
         AnimatorClipInfo[] clipInfo = animator.GetCurrentAnimatorClipInfo(0);
+        Debug.Log(clipInfo.Length);
         Destroy(gameObject, clipInfo[0].clip.length);
         damageText = GetComponent<Text>();
 
@@ -18,7 +19,7 @@ public class DamageAnim : MonoBehaviour {
 
     public void SetText(string text) {
 
-        animator.GetComponent<Text>().text = text;
+        animator.GetComponent<Text>().text = "-" + text;
 
     }
 
