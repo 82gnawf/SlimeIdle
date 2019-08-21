@@ -46,8 +46,8 @@ public class BlueHabitat : MonoBehaviour {
             realText.GetComponent<Text>().text = "Unlock Habitat - $" + unlockValue;
         }
         else {
-            fakeText.GetComponent<Text>().text = "Produce Slime - " + displayBlueHabValue + "Blue Slimes";
-            realText.GetComponent<Text>().text = "Produce Slime - " + displayBlueHabValue + "Blue Slimes";
+            fakeText.GetComponent<Text>().text = "Produce Slime: \n" + displayBlueHabValue + " Blue Slimes";
+            realText.GetComponent<Text>().text = "Produce Slime: \n" + displayBlueHabValue + " Blue Slimes";
         }
 
         if (BlueHabLevel < 1) {

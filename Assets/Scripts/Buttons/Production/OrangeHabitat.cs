@@ -46,8 +46,8 @@ public class OrangeHabitat : MonoBehaviour {
             realText.GetComponent<Text>().text = "Unlock Habitat - $" + unlockValue;
         }
         else {
-            fakeText.GetComponent<Text>().text = "Produce Slime - " + displayOrangeHabValue + "Orange Slimes";
-            realText.GetComponent<Text>().text = "Produce Slime - " + displayOrangeHabValue + "Orange Slimes";
+            fakeText.GetComponent<Text>().text = "Produce Slime: \n" + displayOrangeHabValue + " Orange Slimes";
+            realText.GetComponent<Text>().text = "Produce Slime: \n" + displayOrangeHabValue + " Orange Slimes";
         }
 
         if (OrangeHabLevel < 1) {
