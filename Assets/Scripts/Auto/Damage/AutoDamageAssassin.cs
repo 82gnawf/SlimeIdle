@@ -21,7 +21,7 @@ public class AutoDamageAssassin : MonoBehaviour {
     IEnumerator DamageSlime() {
         GlobalHp.TempHp -= InternalDamage; //deals the damage
 
-        yield return new WaitForSeconds(1); //waits for (x) seconds
+        yield return new WaitForSeconds(GlobalAssassin.HitRate); //waits for (x) seconds
         AssassinAutoDamage = false; //resets the bool
     }
 }

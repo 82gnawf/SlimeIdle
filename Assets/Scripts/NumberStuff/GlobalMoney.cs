@@ -15,18 +15,27 @@ public class GlobalMoney : MonoBehaviour
     public GameObject redPrice;
     public GameObject yellowPrice;
     public GameObject orangePrice;
+    public GameObject purplePrice;
+    public GameObject whitePrice;
+    public GameObject blackPrice;
 
     public static int greenWorth = 2;
     public static int blueWorth = 4;
     public static int redWorth = 6;
     public static int yellowWorth = 8;
     public static int orangeWorth = 10;
+    public static int purpleWorth = 12;
+    public static int whiteWorth = 20;
+    public static int blackWorth = 50;
 
     public int intGreenWorth;
     public int intBlueWorth;
     public int intRedWorth;
     public int intYellowWorth;
     public int intOrangeWorth;
+    public int intPurpleWorth;
+    public int intWhiteWorth;
+    public int intBlackWorth;
 
     public static int MoneyForPrestige;
 
@@ -48,5 +57,14 @@ public class GlobalMoney : MonoBehaviour
 
         intOrangeWorth = orangeWorth;
         orangePrice.GetComponent<Text>().text = "Value: $" + intOrangeWorth;
+
+        intPurpleWorth = purpleWorth;
+        purplePrice.GetComponent<Text>().text = "Value: $" + intPurpleWorth;
+
+        intWhiteWorth = whiteWorth;
+        whitePrice.GetComponent<Text>().text = "Value: $" + intWhiteWorth;
+
+        intBlackWorth = blackWorth;
+        blackPrice.GetComponent<Text>().text = "Value: $" + intBlackWorth;
     }
 }

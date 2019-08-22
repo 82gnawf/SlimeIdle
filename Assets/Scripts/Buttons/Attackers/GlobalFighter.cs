@@ -17,14 +17,24 @@ public class GlobalFighter : MonoBehaviour {
     public static double FighterValue; //cost 
     public int displayFighterValue; //god im being trolled
     public static int FighterLevel; //level
+
     public static double FighterDamage; //damage dealt
+    public static float DamageRate;
+    public static double CritDamage;
+    public static float CritRate;
+
+    public static float HitRate;
 
     public static double FighterDPS;
 
     void Update () {
         FighterValue = 20 * Math.Pow(1.5, FighterLevel);
         FighterDamage = 4 * Math.Pow(1.5, FighterLevel - 1);
-        FighterDPS = FighterDamage;
+        DamageRate = 100;
+        CritDamage = FighterDamage * 2;
+        CritRate = 0;
+        HitRate = 1.0f;
+        FighterDPS = FighterDamage / HitRate;
         currentMoney = GlobalMoney.MoneyCount;
 
         if (FighterLevel == 0) {

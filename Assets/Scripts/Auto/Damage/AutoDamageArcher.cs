@@ -21,7 +21,7 @@ public class AutoDamageArcher : MonoBehaviour {
     IEnumerator DamageSlime() {
         GlobalHp.TempHp -= InternalDamage; //deals the damage
 
-        yield return new WaitForSeconds(1); //waits for (x) seconds
+        yield return new WaitForSeconds(GlobalArcher.HitRate); //waits for (x) seconds
         ArcherAutoDamage = false; //resets the bool
     }
 }

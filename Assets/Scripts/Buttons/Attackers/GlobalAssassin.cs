@@ -17,14 +17,24 @@ public class GlobalAssassin : MonoBehaviour {
     public static double AssassinValue; //cost
     public int displayAssassinValue; //god im being trolled
     public static int AssassinLevel; //level
+
     public static double AssassinDamage; //damage dealt
+    public static float DamageRate;
+    public static double CritDamage;
+    public static float CritRate;
+
+    public static float HitRate;
 
     public static double AssassinDPS;
 
     void Update() {
         AssassinValue = 1000 * Math.Pow(1.5, AssassinLevel);
-        AssassinDamage = 50 * Math.Pow(1.5, AssassinLevel - 1);
-        AssassinDPS = AssassinDamage;
+        AssassinDamage = 100 * Math.Pow(1.5, AssassinLevel - 1);
+        DamageRate = 100;
+        CritDamage = AssassinDamage * 10;
+        CritRate = 50;
+        HitRate = 3.0f;
+        AssassinDPS = AssassinDamage / HitRate;
         currentMoney = GlobalMoney.MoneyCount;
 
         if (AssassinLevel == 0) {

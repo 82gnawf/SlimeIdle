@@ -44,7 +44,7 @@ public class DamageButton : MonoBehaviour {
             }
         }
         else{
-            //missedAnim;
+            DamageAnimController.CreateDamageText("Missed!", transform);
         }
 
 

@@ -17,14 +17,24 @@ public class GlobalKnight : MonoBehaviour {
     public static double KnightValue; //cost
     public int displayKnightValue; //god im being trolled
     public static int KnightLevel; //level
+
     public static double KnightDamage; //damage dealt
+    public static float DamageRate;
+    public static double CritDamage;
+    public static float CritRate;
+
+    public static float HitRate;
 
     public static double KnightDPS;
 
     void Update() {
         KnightValue = 200 * Math.Pow(1.5, KnightLevel);
-        KnightDamage = 15 * Math.Pow(1.5, KnightLevel - 1);
-        KnightDPS = KnightDamage;
+        KnightDamage = 30 * Math.Pow(1.5, KnightLevel - 1);
+        DamageRate = 100;
+        CritDamage = KnightDamage * 2;
+        CritRate = 0;
+        HitRate = 1.5f;
+        KnightDPS = KnightDamage/HitRate;
         currentMoney = GlobalMoney.MoneyCount;
 
         if (KnightLevel == 0) {

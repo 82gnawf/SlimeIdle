@@ -14,6 +14,9 @@ public class GlobalHp : MonoBehaviour {
     public Sprite redSlime;
     public Sprite yellowSlime;
     public Sprite orangeSlime;
+    public Sprite purpleSlime;
+    public Sprite whiteSlime;
+    public Sprite blackSlime;
 
     public int slimeRand;  //used for random choosing of slime
 
@@ -62,6 +65,15 @@ public class GlobalHp : MonoBehaviour {
                 case 5:
                     GlobalSlime.orangeSlimeCount += 1;
                     break;
+                case 6:
+                    GlobalSlime.purpleSlimeCount += 1;
+                    break;
+                case 7:
+                    GlobalSlime.whiteSlimeCount += 1;
+                    break;
+                case 8:
+                    GlobalSlime.blackSlimeCount += 1;
+                    break;
             }
 
             GlobalXp.XpCount += 1; //increase xp by 1
@@ -96,6 +108,12 @@ public class GlobalHp : MonoBehaviour {
                 return 10;
             case 5:
                 return 20;
+            case 6:
+                return 0;
+            case 7:
+                return 40;
+            case 8:
+                return 50;
             
         }
         return 0;
@@ -113,6 +131,12 @@ public class GlobalHp : MonoBehaviour {
                 return 0;
             case 5:
                 return 0;
+            case 6:
+                return 0;
+            case 7:
+                return 10;
+            case 8:
+                return 10;
 
         }
         return 0;
@@ -218,6 +242,99 @@ public class GlobalHp : MonoBehaviour {
                     n = 1;
                 }
                 break;
+            case 11:
+                if (slimeRand > 8) {
+                    n = 5;
+                }
+                else if (slimeRand > 5 && slimeRand <= 7) {
+                    n = 4;
+                }
+                else if (slimeRand > 2 && slimeRand <= 5) {
+                    n = 3;
+                }
+                else {
+                    n = 2;
+                }
+                break;
+            case 12:
+                if (slimeRand > 9) {
+                    n = 6;
+                }
+                else if (slimeRand > 6 && slimeRand <= 9) {
+                    n = 5;
+                }
+                else if (slimeRand > 2 && slimeRand <= 6) {
+                    n = 4;
+                }
+                else if (slimeRand == 2) {
+                    n = 3;
+                }
+                else {
+                    n = 2;
+                }
+                break;
+            case 13:
+                if (slimeRand > 8) {
+                    n = 6;
+                }
+                else if (slimeRand > 5 && slimeRand <= 7) {
+                    n = 5;
+                }
+                else if (slimeRand > 2 && slimeRand <= 5) {
+                    n = 4;
+                }
+                else {
+                    n = 3;
+                }
+                break;
+            case 14:
+                if (slimeRand > 9) {
+                    n = 7;
+                }
+                else if (slimeRand > 6 && slimeRand <= 9) {
+                    n = 6;
+                }
+                else if (slimeRand > 2 && slimeRand <= 6) {
+                    n = 5;
+                }
+                else if (slimeRand == 2) {
+                    n = 4;
+                }
+                else {
+                    n = 3;
+                }
+                break;
+            case 15:
+                if (slimeRand > 8) {
+                    n = 7;
+                }
+                else if (slimeRand > 5 && slimeRand <= 7) {
+                    n = 6;
+                }
+                else if (slimeRand > 2 && slimeRand <= 5) {
+                    n = 5;
+                }
+                else {
+                    n = 4;
+                }
+                break;
+            case 16:
+                if (slimeRand > 9) {
+                    n = 8;
+                }
+                else if (slimeRand > 6 && slimeRand <= 9) {
+                    n = 7;
+                }
+                else if (slimeRand > 2 && slimeRand <= 6) {
+                    n = 6;
+                }
+                else if (slimeRand == 2) {
+                    n = 5;
+                }
+                else {
+                    n = 4;
+                }
+                break;
         }
         return n;
     }
@@ -240,6 +357,15 @@ public class GlobalHp : MonoBehaviour {
             case 5:
                 SlimeImage.GetComponent<Image>().sprite = orangeSlime;
                 break;
+            case 6:
+                SlimeImage.GetComponent<Image>().sprite = purpleSlime;
+                break;
+            case 7:
+                SlimeImage.GetComponent<Image>().sprite = whiteSlime;
+                break;
+            case 8:
+                SlimeImage.GetComponent<Image>().sprite = blackSlime;
+                break;
         }
     }
 
@@ -256,10 +382,19 @@ public class GlobalHp : MonoBehaviour {
                 x = 20;
                 break;
             case 4:
-                x = 30;
+                x = 40;
                 break;
             case 5:
-                x = 50;
+                x = 80;
+                break;
+            case 6:
+                x = 250;
+                break;
+            case 7:
+                x = 350;
+                break;
+            case 8:
+                x = 500;
                 break;
         }
         return x;

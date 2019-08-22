@@ -21,7 +21,7 @@ public class AutoDamageKnight : MonoBehaviour {
     IEnumerator DamageSlime() {
         GlobalHp.TempHp -= InternalDamage; //deals the damage
 
-        yield return new WaitForSeconds(1); //waits for (x) seconds
+        yield return new WaitForSeconds(GlobalKnight.HitRate); //waits for (x) seconds
         KnightAutoDamage = false; //resets the bool
     }
 }

@@ -17,14 +17,24 @@ public class GlobalWarrior : MonoBehaviour {
     public static double WarriorValue; //cost
     public int displayWarriorValue; //god im being trolled
     public static int WarriorLevel; //level
+
     public static double WarriorDamage; //damage dealt
+    public static float DamageRate;
+    public static double CritDamage;
+    public static float CritRate;
+
+    public static float HitRate;
 
     public static double WarriorDPS;
 
     void Update() {
         WarriorValue = 100 * Math.Pow(1.5, WarriorLevel);
         WarriorDamage = 10 * Math.Pow(1.5, WarriorLevel - 1);
-        WarriorDPS = WarriorDamage;
+        DamageRate = 100;
+        CritDamage = WarriorDamage*2;
+        CritRate = 0;
+        HitRate = 0.8f;
+        WarriorDPS = WarriorDamage/HitRate;
         currentMoney = GlobalMoney.MoneyCount;
 
         if (WarriorLevel == 0) {

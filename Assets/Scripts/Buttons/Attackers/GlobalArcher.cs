@@ -17,17 +17,24 @@ public class GlobalArcher : MonoBehaviour {
     public static double ArcherValue; //cost
     public int displayArcherValue; //god im being trolled
     public static int ArcherLevel; //level of fighter
+
     public static double ArcherDamage; //damage dealt
-    public static int ArcherRate;
-    public static int ArcherCrit;
-    public static int ArcherCritRate;
+    public static float DamageRate;
+    public static double CritDamage;
+    public static float CritRate;
+
+    public static float HitRate;
 
     public static double ArcherDPS;
 
     void Update() {
         ArcherValue = 40 * Math.Pow(1.5, ArcherLevel);
         ArcherDamage = 6 * Math.Pow(1.5, ArcherLevel - 1);
-        ArcherDPS = ArcherDamage;
+        DamageRate = 100;
+        CritDamage = ArcherDamage * 2;
+        CritRate = 0;
+        HitRate = 1.2f;
+        ArcherDPS = ArcherDamage / HitRate;
         currentMoney = GlobalMoney.MoneyCount;
 
         if (ArcherLevel == 0) {
