@@ -152,5 +152,91 @@ public class SellButton : MonoBehaviour {
         GlobalMoney.MoneyForPrestige += GlobalMoney.orangeWorth;
     }
 
+    //purple
+    public void PurpleButtonClick1() {
+        if (GlobalSlime.purpleSlimeCount > 0) {
+            GlobalSlime.purpleSlimeCount -= 1; //purpleuces slime amount
+            GlobalMoney.MoneyCount += GlobalMoney.purpleWorth; //get money per slime sold
+            GlobalMoney.MoneyForPrestige += GlobalMoney.purpleWorth;
+        }
+    }
+    public void PurpleButtonClick10() {
+        if (GlobalSlime.purpleSlimeCount >= 10) {
+            GlobalSlime.purpleSlimeCount -= 10;
+            GlobalMoney.MoneyCount += GlobalMoney.purpleWorth * 10;
+            GlobalMoney.MoneyForPrestige += GlobalMoney.purpleWorth;
+        }
+    }
+    public void PurpleButtonClick100() {
+        if (GlobalSlime.purpleSlimeCount >= 100) {
+            GlobalSlime.purpleSlimeCount -= 100;
+            GlobalMoney.MoneyCount += GlobalMoney.purpleWorth * 100;
+            GlobalMoney.MoneyForPrestige += GlobalMoney.purpleWorth;
+        }
+    }
+    public void PurpleButtonClickMax() {
+        tempSlime = GlobalSlime.purpleSlimeCount;
+        GlobalSlime.purpleSlimeCount = 0;
+        GlobalMoney.MoneyCount += GlobalMoney.purpleWorth * tempSlime;
+        GlobalMoney.MoneyForPrestige += GlobalMoney.purpleWorth;
+    }
+
+    //white
+    public void WhiteButtonClick1() {
+        if (GlobalSlime.whiteSlimeCount > 0) {
+            GlobalSlime.whiteSlimeCount -= 1; //whiteuces slime amount
+            GlobalMoney.MoneyCount += GlobalMoney.whiteWorth; //get money per slime sold
+            GlobalMoney.MoneyForPrestige += GlobalMoney.whiteWorth;
+        }
+    }
+    public void WhiteButtonClick10() {
+        if (GlobalSlime.whiteSlimeCount >= 10) {
+            GlobalSlime.whiteSlimeCount -= 10;
+            GlobalMoney.MoneyCount += GlobalMoney.whiteWorth * 10;
+            GlobalMoney.MoneyForPrestige += GlobalMoney.whiteWorth;
+        }
+    }
+    public void WhiteButtonClick100() {
+        if (GlobalSlime.whiteSlimeCount >= 100) {
+            GlobalSlime.whiteSlimeCount -= 100;
+            GlobalMoney.MoneyCount += GlobalMoney.whiteWorth * 100;
+            GlobalMoney.MoneyForPrestige += GlobalMoney.whiteWorth;
+        }
+    }
+    public void WhiteButtonClickMax() {
+        tempSlime = GlobalSlime.whiteSlimeCount;
+        GlobalSlime.whiteSlimeCount = 0;
+        GlobalMoney.MoneyCount += GlobalMoney.whiteWorth * tempSlime;
+        GlobalMoney.MoneyForPrestige += GlobalMoney.whiteWorth;
+    }
+
+    //black
+    public void BlackButtonClick1() {
+        if (GlobalSlime.blackSlimeCount > 0) {
+            GlobalSlime.blackSlimeCount -= 1; //blackuces slime amount
+            GlobalMoney.MoneyCount += GlobalMoney.blackWorth; //get money per slime sold
+            GlobalMoney.MoneyForPrestige += GlobalMoney.blackWorth;
+        }
+    }
+    public void BlackButtonClick10() {
+        if (GlobalSlime.blackSlimeCount >= 10) {
+            GlobalSlime.blackSlimeCount -= 10;
+            GlobalMoney.MoneyCount += GlobalMoney.blackWorth * 10;
+            GlobalMoney.MoneyForPrestige += GlobalMoney.blackWorth;
+        }
+    }
+    public void BlackButtonClick100() {
+        if (GlobalSlime.blackSlimeCount >= 100) {
+            GlobalSlime.blackSlimeCount -= 100;
+            GlobalMoney.MoneyCount += GlobalMoney.blackWorth * 100;
+            GlobalMoney.MoneyForPrestige += GlobalMoney.blackWorth;
+        }
+    }
+    public void BlackButtonClickMax() {
+        tempSlime = GlobalSlime.blackSlimeCount;
+        GlobalSlime.blackSlimeCount = 0;
+        GlobalMoney.MoneyCount += GlobalMoney.blackWorth * tempSlime;
+        GlobalMoney.MoneyForPrestige += GlobalMoney.blackWorth;
+    }
 
 }
