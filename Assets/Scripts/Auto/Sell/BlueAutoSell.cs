@@ -21,17 +21,17 @@ public class BlueAutoSell : MonoBehaviour {
         if (GlobalSlime.blueSlimeCount > 0 && GlobalSlime.blueSlimeCount < BlueSell) {
             GlobalMoney.MoneyCount += (GlobalMoney.blueWorth * GlobalSlime.blueSlimeCount);
             GlobalSlime.blueSlimeCount -= GlobalSlime.blueSlimeCount;
-            yield return new WaitForSeconds(1); //waits for (x) seconds
+            yield return new WaitForSeconds(GlobalBlueSeller.SellerRate); //waits for (x) seconds
             BlueSlimeAutoSell = false; //resets the bool
         }
         else if (GlobalSlime.blueSlimeCount > 0) {
             GlobalSlime.blueSlimeCount -= BlueSell;
             GlobalMoney.MoneyCount += (GlobalMoney.blueWorth * BlueSell);
-            yield return new WaitForSeconds(1); //waits for (x) seconds
+            yield return new WaitForSeconds(GlobalBlueSeller.SellerRate); //waits for (x) seconds
             BlueSlimeAutoSell = false; //resets the bool
         }
         else {
-            yield return new WaitForSeconds(1); //waits for (x) seconds
+            yield return new WaitForSeconds(GlobalBlueSeller.SellerRate); //waits for (x) seconds
             BlueSlimeAutoSell = false; //resets the bool }
         }
     }

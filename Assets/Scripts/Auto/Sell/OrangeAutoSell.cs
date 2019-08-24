@@ -21,17 +21,17 @@ public class OrangeAutoSell : MonoBehaviour {
         if (GlobalSlime.orangeSlimeCount > 0 && GlobalSlime.orangeSlimeCount < OrangeSell) {
             GlobalMoney.MoneyCount += (GlobalMoney.orangeWorth * GlobalSlime.orangeSlimeCount);
             GlobalSlime.orangeSlimeCount -= GlobalSlime.orangeSlimeCount;
-            yield return new WaitForSeconds(1); //waits for (x) seconds
+            yield return new WaitForSeconds(GlobalOrangeSeller.SellerRate); //waits for (x) seconds
             OrangeSlimeAutoSell = false; //resets the bool
         }
         else if (GlobalSlime.orangeSlimeCount > 0) {
             GlobalSlime.orangeSlimeCount -= OrangeSell;
             GlobalMoney.MoneyCount += (GlobalMoney.orangeWorth * OrangeSell);
-            yield return new WaitForSeconds(1); //waits for (x) seconds
+            yield return new WaitForSeconds(GlobalOrangeSeller.SellerRate); //waits for (x) seconds
             OrangeSlimeAutoSell = false; //resets the bool
         }
         else {
-            yield return new WaitForSeconds(1); //waits for (x) seconds
+            yield return new WaitForSeconds(GlobalOrangeSeller.SellerRate); //waits for (x) seconds
             OrangeSlimeAutoSell = false; //resets the bool }
         }
     }

@@ -21,17 +21,17 @@ public class RedAutoSell : MonoBehaviour {
         if (GlobalSlime.redSlimeCount > 0 && GlobalSlime.redSlimeCount < RedSell) {
             GlobalMoney.MoneyCount += (GlobalMoney.redWorth * GlobalSlime.redSlimeCount);
             GlobalSlime.redSlimeCount -= GlobalSlime.redSlimeCount;
-            yield return new WaitForSeconds(1); //waits for (x) seconds
+            yield return new WaitForSeconds(GlobalRedSeller.SellerRate); //waits for (x) seconds
             RedSlimeAutoSell = false; //resets the bool
         }
         else if (GlobalSlime.redSlimeCount > 0) {
             GlobalSlime.redSlimeCount -= RedSell;
             GlobalMoney.MoneyCount += (GlobalMoney.redWorth * RedSell); 
-            yield return new WaitForSeconds(1); //waits for (x) seconds
+            yield return new WaitForSeconds(GlobalRedSeller.SellerRate); //waits for (x) seconds
             RedSlimeAutoSell = false; //resets the bool
         }
         else {
-            yield return new WaitForSeconds(1); //waits for (x) seconds
+            yield return new WaitForSeconds(GlobalRedSeller.SellerRate); //waits for (x) seconds
             RedSlimeAutoSell = false; //resets the bool }
         }
     }

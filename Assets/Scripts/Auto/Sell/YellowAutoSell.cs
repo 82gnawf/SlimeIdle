@@ -21,17 +21,17 @@ public class YellowAutoSell : MonoBehaviour {
         if (GlobalSlime.yellowSlimeCount > 0 && GlobalSlime.yellowSlimeCount < YellowSell) {
             GlobalMoney.MoneyCount += (GlobalMoney.yellowWorth * GlobalSlime.yellowSlimeCount);
             GlobalSlime.yellowSlimeCount -= GlobalSlime.yellowSlimeCount;
-            yield return new WaitForSeconds(1); //waits for (x) seconds
+            yield return new WaitForSeconds(GlobalYellowSeller.SellerRate); //waits for (x) seconds
             YellowSlimeAutoSell = false; //resets the bool
         }
         else if (GlobalSlime.yellowSlimeCount > 0) {
             GlobalSlime.yellowSlimeCount -= YellowSell;
             GlobalMoney.MoneyCount += (GlobalMoney.yellowWorth * YellowSell); 
-            yield return new WaitForSeconds(1); //waits for (x) seconds
+            yield return new WaitForSeconds(GlobalYellowSeller.SellerRate); //waits for (x) seconds
             YellowSlimeAutoSell = false; //resets the bool
         }
         else {
-            yield return new WaitForSeconds(1); //waits for (x) seconds
+            yield return new WaitForSeconds(GlobalYellowSeller.SellerRate); //waits for (x) seconds
             YellowSlimeAutoSell = false; //resets the bool }
         }
     }

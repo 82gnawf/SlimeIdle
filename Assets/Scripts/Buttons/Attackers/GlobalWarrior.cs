@@ -41,7 +41,7 @@ public class GlobalWarrior : MonoBehaviour {
             WarriorStat.GetComponent<Text>().text = "Warrior Lvl.0";
         }
         else {
-            WarriorStat.GetComponent<Text>().text = "Warrior Lvl." + WarriorLevel + " (" + Convert.ToInt32(WarriorDPS) + " DPS)";
+            WarriorStat.GetComponent<Text>().text = "Lvl." + WarriorLevel + " (" + Convert.ToInt32(WarriorDPS) + " DPS)";
         }
 
         displayWarriorValue = Convert.ToInt32(WarriorValue);

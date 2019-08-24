@@ -41,7 +41,7 @@ public class GlobalAssassin : MonoBehaviour {
             AssassinStat.GetComponent<Text>().text = "Assassin Lvl.0";
         }
         else {
-            AssassinStat.GetComponent<Text>().text = "Assassin Lvl." + AssassinLevel + " (" + Convert.ToInt32(AssassinDPS) + " DPS)";
+            AssassinStat.GetComponent<Text>().text = "Lvl." + AssassinLevel + " (" + Convert.ToInt32(AssassinDPS) + " DPS)";
         }
 
         displayAssassinValue = Convert.ToInt32(AssassinValue);

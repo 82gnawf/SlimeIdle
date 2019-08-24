@@ -41,7 +41,7 @@ public class GlobalArcher : MonoBehaviour {
             ArcherStat.GetComponent<Text>().text = "Archer Lvl.0";
         }
         else {
-            ArcherStat.GetComponent<Text>().text = "Archer Lvl." + ArcherLevel + " (" + Convert.ToInt32(ArcherDPS) + " DPS)";
+            ArcherStat.GetComponent<Text>().text = "Lvl." + ArcherLevel + " (" + Convert.ToInt32(ArcherDPS) + " DPS)";
         }
 
         displayArcherValue = Convert.ToInt32(ArcherValue);

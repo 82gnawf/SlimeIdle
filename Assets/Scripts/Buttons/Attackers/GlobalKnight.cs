@@ -41,7 +41,7 @@ public class GlobalKnight : MonoBehaviour {
             KnightStat.GetComponent<Text>().text = "Knight Lvl.0";
         }
         else {
-            KnightStat.GetComponent<Text>().text = "Knight Lvl." + KnightLevel + " (" + Convert.ToInt32(KnightDPS) + " DPS)";
+            KnightStat.GetComponent<Text>().text = "Lvl." + KnightLevel + " (" + Convert.ToInt32(KnightDPS) + " DPS)";
         }
 
         displayKnightValue = Convert.ToInt32(KnightValue);

@@ -41,7 +41,7 @@ public class GlobalFighter : MonoBehaviour {
             FighterStat.GetComponent<Text>().text = "Fighter Lvl.0";
         }
         else {
-            FighterStat.GetComponent<Text>().text = "Fighter Lvl." + FighterLevel + " (" + Convert.ToInt32(FighterDPS) + " DPS)";
+            FighterStat.GetComponent<Text>().text = "Lvl." + FighterLevel + " (" + Convert.ToInt32(FighterDPS) + " DPS)";
         }
 
         displayFighterValue = Convert.ToInt32(FighterValue);

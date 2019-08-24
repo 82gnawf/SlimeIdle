@@ -23,7 +23,8 @@ public class GlobalOrangeSeller : MonoBehaviour {
     void Update () {
         SellerValue = 100 * Math.Pow(10, SellerLevel);
         currentMoney = GlobalMoney.MoneyCount;
-        SellerStat.GetComponent<Text>().text = "Orange Seller Lvl." + SellerLevel + " (" + SellerSPS + " SPS)";
+        SellerSPS = SellerLevel / SellerRate;
+        SellerStat.GetComponent<Text>().text = "Lvl." + SellerLevel + " (" + SellerSPS + " SPS)";
         displaySellerValue = Convert.ToInt32(SellerValue);
 
         if (SellerLevel == 0) { //lvl statements
