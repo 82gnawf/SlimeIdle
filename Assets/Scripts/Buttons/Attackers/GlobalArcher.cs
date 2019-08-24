@@ -38,7 +38,7 @@ public class GlobalArcher : MonoBehaviour {
         currentMoney = GlobalMoney.MoneyCount;
 
         if (ArcherLevel == 0) {
-            ArcherStat.GetComponent<Text>().text = "Archer Lvl.0";
+            ArcherStat.GetComponent<Text>().text = "Lvl.0";
         }
         else {
             ArcherStat.GetComponent<Text>().text = "Lvl." + ArcherLevel + " (" + Convert.ToInt32(ArcherDPS) + " DPS)";

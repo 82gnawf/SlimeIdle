@@ -38,7 +38,7 @@ public class GlobalFighter : MonoBehaviour {
         currentMoney = GlobalMoney.MoneyCount;
 
         if (FighterLevel == 0) {
-            FighterStat.GetComponent<Text>().text = "Fighter Lvl.0";
+            FighterStat.GetComponent<Text>().text = "Lvl.0";
         }
         else {
             FighterStat.GetComponent<Text>().text = "Lvl." + FighterLevel + " (" + Convert.ToInt32(FighterDPS) + " DPS)";

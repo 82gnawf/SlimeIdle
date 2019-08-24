@@ -38,7 +38,7 @@ public class GlobalKnight : MonoBehaviour {
         currentMoney = GlobalMoney.MoneyCount;
 
         if (KnightLevel == 0) {
-            KnightStat.GetComponent<Text>().text = "Knight Lvl.0";
+            KnightStat.GetComponent<Text>().text = "Lvl.0";
         }
         else {
             KnightStat.GetComponent<Text>().text = "Lvl." + KnightLevel + " (" + Convert.ToInt32(KnightDPS) + " DPS)";

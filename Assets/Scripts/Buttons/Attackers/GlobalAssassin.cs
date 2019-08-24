@@ -38,7 +38,7 @@ public class GlobalAssassin : MonoBehaviour {
         currentMoney = GlobalMoney.MoneyCount;
 
         if (AssassinLevel == 0) {
-            AssassinStat.GetComponent<Text>().text = "Assassin Lvl.0";
+            AssassinStat.GetComponent<Text>().text = "Lvl.0";
         }
         else {
             AssassinStat.GetComponent<Text>().text = "Lvl." + AssassinLevel + " (" + Convert.ToInt32(AssassinDPS) + " DPS)";

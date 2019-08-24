@@ -38,7 +38,7 @@ public class GlobalWarrior : MonoBehaviour {
         currentMoney = GlobalMoney.MoneyCount;
 
         if (WarriorLevel == 0) {
-            WarriorStat.GetComponent<Text>().text = "Warrior Lvl.0";
+            WarriorStat.GetComponent<Text>().text = "Lvl.0";
         }
         else {
             WarriorStat.GetComponent<Text>().text = "Lvl." + WarriorLevel + " (" + Convert.ToInt32(WarriorDPS) + " DPS)";
