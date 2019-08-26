@@ -10542,8 +10542,8 @@ MonoBehaviour:
   purpleSlime: {fileID: 21300000, guid: a511dc0f6d4c946428f7c0683b31d742, type: 3}
   whiteSlime: {fileID: 21300000, guid: 180216af8fdf69e41bbf27c8740f4241, type: 3}
   blackSlime: {fileID: 21300000, guid: 14f586a2c53e24648868ebb0c5844bed, type: 3}
-  LeftButton: {fileID: 2105451509}
-  RightButton: {fileID: 1954076885}
+  LeftButton: {fileID: 2105451511}
+  RightButton: {fileID: 1954076887}
 --- !u!1 &512076049
 GameObject:
   m_ObjectHideFlags: 0
@@ -42661,7 +42661,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1904916584
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43718,6 +43718,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 511920155}
         m_MethodName: checkPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 511920155}
+        m_MethodName: checkInteractable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -47865,6 +47876,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 511920155}
         m_MethodName: checkPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 511920155}
+        m_MethodName: checkInteractable
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

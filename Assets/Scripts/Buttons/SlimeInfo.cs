@@ -45,7 +45,7 @@ public class SlimeInfo : MonoBehaviour
         if (pageNum == 1) {
             LeftButton.interactable = false;
         }
-        else if (pageNum == 8) {
+        else if (pageNum == 8) { // 8 due to number of slimes at tier 1
             RightButton.interactable = false;
         }
         else {
