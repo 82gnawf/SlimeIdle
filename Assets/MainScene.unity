@@ -10391,6 +10391,7 @@ GameObject:
   - component: {fileID: 511920152}
   - component: {fileID: 511920153}
   - component: {fileID: 511920154}
+  - component: {fileID: 511920155}
   m_Layer: 0
   m_Name: ButtonObject
   m_TagString: Untagged
@@ -10512,6 +10513,37 @@ MonoBehaviour:
   buyUnitsFighterPanel: {fileID: 1046669219}
   buyUnitsSellerPanel: {fileID: 159291440}
   activePanel: 0
+--- !u!114 &511920155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511920148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c9b75577aaa7bc4caeb2fdde2b1a723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pageNum: 0
+  color: 
+  hp: 0
+  rate: 0
+  critRate: 0
+  special: 
+  SlimeImage: {fileID: 1981540491}
+  SlimeLabel: {fileID: 1203015017}
+  Stats: {fileID: 2115186648}
+  greenSlime: {fileID: 21300000, guid: ac545d4103162b04da4aa95e13b6c903, type: 3}
+  blueSlime: {fileID: 21300000, guid: 4c350249e8b8c4944a873dc91e983d6c, type: 3}
+  redSlime: {fileID: 21300000, guid: 4462fd6c970bd8e48a8bc22ba934245d, type: 3}
+  yellowSlime: {fileID: 21300000, guid: 34074806596a0cc4d87c433d47bf5995, type: 3}
+  orangeSlime: {fileID: 21300000, guid: 1f3b8050bd5d0b0469d0451dc04d8f96, type: 3}
+  purpleSlime: {fileID: 21300000, guid: a511dc0f6d4c946428f7c0683b31d742, type: 3}
+  whiteSlime: {fileID: 21300000, guid: 180216af8fdf69e41bbf27c8740f4241, type: 3}
+  blackSlime: {fileID: 21300000, guid: 14f586a2c53e24648868ebb0c5844bed, type: 3}
+  LeftButton: {fileID: 2105451509}
+  RightButton: {fileID: 1954076885}
 --- !u!1 &512076049
 GameObject:
   m_ObjectHideFlags: 0
@@ -16662,6 +16694,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1904916583}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 511920155}
+        m_MethodName: open
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -43661,7 +43704,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1954076888}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 511920155}
+        m_MethodName: right
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 511920155}
+        m_MethodName: checkPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1954076888
@@ -47786,7 +47851,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2105451512}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 511920155}
+        m_MethodName: left
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 511920155}
+        m_MethodName: checkPage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2105451512
@@ -48275,11 +48362,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Health: 12
+  m_Text: 'Base Health: 10
 
-    Dodge Rate: 123%
+    Dodge Rate: 0%
 
-    Crit. Dodge Rate: 23%'
+    Crit. Dodge Rate: 0%'
 --- !u!222 &2115186651
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -369,9 +369,9 @@ public class GlobalHp : MonoBehaviour {
         }
     }
 
-    public int GenerateHp(int j) {
+    public static int GenerateHp(int j) {
         int x = 10;
-        switch (slimeSpawn) {
+        switch (j) {
             case 1:
                 x = 10;
                 break;
