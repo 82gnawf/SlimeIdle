@@ -41,7 +41,7 @@ public class SellerInfo : MonoBehaviour
         if (pageNum == 1) {
             LeftButton.interactable = false;
         }
-        else if (pageNum == 5) { // 8 due to number of slimes at tier 1
+        else if (pageNum == 5) { //num of sellers
             RightButton.interactable = false;
         }
         else {
@@ -53,23 +53,38 @@ public class SellerInfo : MonoBehaviour
     public void checkPage() {
         switch(pageNum) {
             case 1:
+                unit = "green";
                 UnitImage.GetComponent<Image>().sprite = Green;
+                sellerLevel = GlobalGreenSeller.SellerLevel;
+                sellRate = GlobalGreenSeller.SellerRate;
                 break;
             case 2:
+                unit = "blue";
                 UnitImage.GetComponent<Image>().sprite = Blue;
+                sellerLevel = GlobalBlueSeller.SellerLevel;
+                sellRate = GlobalBlueSeller.SellerRate;
                 break;
             case 3:
+                unit = "red";
                 UnitImage.GetComponent<Image>().sprite = Red;
+                sellerLevel = GlobalRedSeller.SellerLevel;
+                sellRate = GlobalRedSeller.SellerRate;
                 break;
             case 4:
+                unit = "yellow";
                 UnitImage.GetComponent<Image>().sprite = Yellow;
+                sellerLevel = GlobalYellowSeller.SellerLevel;
+                sellRate = GlobalYellowSeller.SellerRate;
                 break;
             case 5:
+                unit = "orange";
                 UnitImage.GetComponent<Image>().sprite = Orange;
+                sellerLevel = GlobalOrangeSeller.SellerLevel;
+                sellRate = GlobalOrangeSeller.SellerRate;
                 break;
         }
 
-        SellerLabel.GetComponent<Text>().text = unit;
-        Stats.GetComponent<Text>().text = "Yes" ;
+        SellerLabel.GetComponent<Text>().text = unit + " Seller";
+        Stats.GetComponent<Text>().text = "Sell Amount: " + sellerLevel + " slime \n Sell Rate: every " + sellRate + " sec.";
     }
 }

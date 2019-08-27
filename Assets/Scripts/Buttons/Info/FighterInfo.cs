@@ -44,7 +44,7 @@ public class FighterInfo : MonoBehaviour
         if (pageNum == 1) {
             LeftButton.interactable = false;
         }
-        else if (pageNum == 5) { // 8 due to number of slimes at tier 1
+        else if (pageNum == 5) { // 5 fighters
             RightButton.interactable = false;
         }
         else {
