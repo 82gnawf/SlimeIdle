@@ -14,7 +14,6 @@ public class DamageButton : MonoBehaviour {
     public double CritRate;
     public double HitRate;
 
-    
 
     public void Start() {
 
