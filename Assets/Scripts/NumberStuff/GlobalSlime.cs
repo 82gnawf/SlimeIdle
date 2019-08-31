@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GlobalSlime : MonoBehaviour
 {
+    
     //green 
     public GameObject GreenSlimeDisplay;
 

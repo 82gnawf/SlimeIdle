@@ -62,6 +62,9 @@ public class SaveGame : MonoBehaviour {
         PlayerPrefs.SetInt("SavedXpCount", GlobalXp.XpCount);
         PlayerPrefs.SetInt("SavedLevelCount", GlobalXp.LevelCount);
 
+        //unlock
+        PlayerPrefs.SetInt("SavedSlimeSeen", SlimeUnlockNumber.SlimeSeen);
+
         yield return new WaitForSeconds(5); //waits for (x) seconds
         SavingGame = false; //resets the bool
     }

@@ -51,6 +51,7 @@ public class LoadGame : MonoBehaviour{
     public int savedSpawn;
     public int savedLevelCount;
     public int savedXpCount;
+    public int savedSlimeSeen;
 
     public static bool spriteInit;
 
@@ -170,6 +171,10 @@ public class LoadGame : MonoBehaviour{
         GlobalXp.LevelCount = savedLevelCount;
         savedXpCount = PlayerPrefs.GetInt("SavedXpCount");
         GlobalXp.XpCount = savedXpCount;
+
+        //unlock
+        savedSlimeSeen = PlayerPrefs.GetInt("SavedSlimeSeen");
+        SlimeUnlockNumber.SlimeSeen = savedSlimeSeen;
 
         //auto checker
         if (GlobalFighter.FighterLevel > 0) { 
