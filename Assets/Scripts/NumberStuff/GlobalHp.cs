@@ -335,6 +335,50 @@ public class GlobalHp : MonoBehaviour {
                     n = 4;
                 }
                 break;
+            case 17:
+                if (slimeRand > 9) {
+                    n = 8;
+                }
+                else if (slimeRand > 4 && slimeRand <= 9) {
+                    n = 7;
+                }
+                else if (slimeRand > 2 && slimeRand <= 4) {
+                    n = 6;
+                }
+                else {
+                    n = 5;
+                }
+                break;
+            case 18:
+                if (slimeRand > 6) {
+                    n = 8;
+                }
+                else if (slimeRand > 3 && slimeRand <= 6) {
+                    n = 7;
+                }
+                else {
+                    n = 6;
+                }
+                break;
+            case 19:
+                if (slimeRand > 5) {
+                    n = 8;
+                }
+                else {
+                    n = 7;
+                }
+                break;
+            case 20:
+                if (slimeRand > 3) {
+                    n = 8;
+                }
+                else {
+                    n = 7;
+                }
+                break;
+            case 21:
+                n = 8;
+                break;
         }
         return n;
     }
