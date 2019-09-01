@@ -5170,10 +5170,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 225389352}
-  - component: {fileID: 225389351}
-  - component: {fileID: 225389353}
   - component: {fileID: 225389354}
   - component: {fileID: 225389355}
+  - component: {fileID: 225389351}
+  - component: {fileID: 225389353}
+  - component: {fileID: 225389356}
   m_Layer: 0
   m_Name: UnlockObject
   m_TagString: Untagged
@@ -5277,6 +5278,28 @@ MonoBehaviour:
   PSix: {fileID: 1652009590}
   PSeven: {fileID: 738512247}
   PEight: {fileID: 1077629579}
+--- !u!114 &225389356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225389350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fa3c8b083d25b4498fcca80218a8b5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UOne: {fileID: 605604333}
+  UTwo: {fileID: 1049753120}
+  UThree: {fileID: 1580740100}
+  UFour: {fileID: 2000794462}
+  UFive: {fileID: 868221250}
+  POne: {fileID: 464806955}
+  PTwo: {fileID: 674036617}
+  PThree: {fileID: 170085730}
+  PFour: {fileID: 2042375473}
+  PFive: {fileID: 1441201357}
 --- !u!1 &226317853
 GameObject:
   m_ObjectHideFlags: 0
@@ -9035,7 +9058,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920152}
-        m_MethodName: StartAutoDamageKnight
+        m_MethodName: StartYellowProd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11970,7 +11993,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920152}
-        m_MethodName: StartAutoDamageArcher
+        m_MethodName: StartBlueProd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22600,7 +22623,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920152}
-        m_MethodName: StartAutoDamageAssassin
+        m_MethodName: StartOrangeProd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -50330,7 +50353,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 511920152}
-        m_MethodName: StartAutoDamageWarrior
+        m_MethodName: StartRedProd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
