@@ -7770,8 +7770,8 @@ GameObject:
   m_Component:
   - component: {fileID: 331409639}
   - component: {fileID: 331409642}
-  - component: {fileID: 331409641}
   - component: {fileID: 331409640}
+  - component: {fileID: 331409641}
   m_Layer: 5
   m_Name: SlimeProduction
   m_TagString: Untagged
@@ -7793,10 +7793,10 @@ RectTransform:
   m_Father: {fileID: 529591977}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 288, y: -154}
-  m_SizeDelta: {x: 282, y: 276}
+  m_AnchoredPosition: {x: 288, y: 0}
+  m_SizeDelta: {x: 282, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &331409640
 MonoBehaviour:
@@ -7863,7 +7863,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 331409638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -7874,15 +7874,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cb6d0dd327bb3c141bdde5cd8b0fdecc, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 78a189c87d22fa043b066e557ba42511, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 60
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Prod.
 --- !u!222 &331409642
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9117,8 +9122,8 @@ GameObject:
   m_Component:
   - component: {fileID: 370270582}
   - component: {fileID: 370270585}
-  - component: {fileID: 370270584}
   - component: {fileID: 370270583}
+  - component: {fileID: 370270584}
   m_Layer: 5
   m_Name: Prestige
   m_TagString: Untagged
@@ -9140,10 +9145,10 @@ RectTransform:
   m_Father: {fileID: 529591977}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 576, y: -154}
-  m_SizeDelta: {x: 282, y: 276}
+  m_AnchoredPosition: {x: 576, y: 0}
+  m_SizeDelta: {x: 282, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &370270583
 MonoBehaviour:
@@ -9210,7 +9215,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 370270581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -9221,15 +9226,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cb6d0dd327bb3c141bdde5cd8b0fdecc, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 78a189c87d22fa043b066e557ba42511, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 60
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Prestige
 --- !u!222 &370270585
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12398,11 +12408,6 @@ MonoBehaviour:
   SwordButton: {fileID: 1830790350}
   SlimeProductionButton: {fileID: 331409640}
   PrestigeButton: {fileID: 370270583}
-  SellImage: {fileID: 21300000, guid: 2ee3872e0120dae46b0678aa6d508c21, type: 3}
-  BuyUnitsImage: {fileID: 21300000, guid: 9bcb4fb1d7ef64c458ddac80c4975998, type: 3}
-  SwordImage: {fileID: 21300000, guid: 44598c65b598ae449a228af478391c7f, type: 3}
-  ProductionImage: {fileID: 21300000, guid: 11165b7aab989fa4abd38c2d0907f50c, type: 3}
-  PrestigeImage: {fileID: 21300000, guid: d398fbb6f7194e84486ef407f2fe40fc, type: 3}
   SellSlimePanel: {fileID: 657236956}
   BuyUnitPanel: {fileID: 627312360}
   SwordPanel: {fileID: 1386209408}
@@ -12842,8 +12847,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 138}
-  m_SizeDelta: {x: 2000, y: 400}
+  m_AnchoredPosition: {x: 0, y: 100}
+  m_SizeDelta: {x: 2000, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529591978
 MonoBehaviour:
@@ -13499,7 +13504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &556762413
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43079,8 +43084,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1662892585}
   - component: {fileID: 1662892588}
-  - component: {fileID: 1662892587}
   - component: {fileID: 1662892586}
+  - component: {fileID: 1662892587}
   m_Layer: 5
   m_Name: SellSlime
   m_TagString: Untagged
@@ -43102,10 +43107,10 @@ RectTransform:
   m_Father: {fileID: 529591977}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -576, y: -154}
-  m_SizeDelta: {x: 278, y: 276}
+  m_AnchoredPosition: {x: -576, y: 0}
+  m_SizeDelta: {x: 278, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1662892586
 MonoBehaviour:
@@ -43172,7 +43177,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1662892584}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -43183,15 +43188,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cb6d0dd327bb3c141bdde5cd8b0fdecc, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 78a189c87d22fa043b066e557ba42511, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 100
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: sell
 --- !u!222 &1662892588
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -46655,8 +46665,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1764580647}
   - component: {fileID: 1764580650}
-  - component: {fileID: 1764580649}
   - component: {fileID: 1764580648}
+  - component: {fileID: 1764580649}
   m_Layer: 5
   m_Name: BuyUnit
   m_TagString: Untagged
@@ -46678,10 +46688,10 @@ RectTransform:
   m_Father: {fileID: 529591977}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -288, y: -154}
-  m_SizeDelta: {x: 282, y: 276}
+  m_AnchoredPosition: {x: -288, y: 0}
+  m_SizeDelta: {x: 282, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1764580648
 MonoBehaviour:
@@ -46748,7 +46758,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1764580646}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -46759,15 +46769,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cb6d0dd327bb3c141bdde5cd8b0fdecc, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 78a189c87d22fa043b066e557ba42511, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 6
+    m_MaxSize: 60
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: units
 --- !u!222 &1764580650
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -48114,8 +48129,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1830790349}
   - component: {fileID: 1830790352}
-  - component: {fileID: 1830790351}
   - component: {fileID: 1830790350}
+  - component: {fileID: 1830790351}
   m_Layer: 5
   m_Name: Sword
   m_TagString: Untagged
@@ -48137,10 +48152,10 @@ RectTransform:
   m_Father: {fileID: 529591977}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -154}
-  m_SizeDelta: {x: 282, y: 276}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 282, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1830790350
 MonoBehaviour:
@@ -48207,7 +48222,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1830790348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -48218,15 +48233,20 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cb6d0dd327bb3c141bdde5cd8b0fdecc, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 78a189c87d22fa043b066e557ba42511, type: 3}
+    m_FontSize: 60
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 60
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: sword
 --- !u!222 &1830790352
 CanvasRenderer:
   m_ObjectHideFlags: 0

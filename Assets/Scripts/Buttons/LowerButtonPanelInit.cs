@@ -12,12 +12,6 @@ public class LowerButtonPanelInit : MonoBehaviour
     public Button SlimeProductionButton;
     public Button PrestigeButton;
 
-    public Sprite SellImage;
-    public Sprite BuyUnitsImage;
-    public Sprite SwordImage;
-    public Sprite ProductionImage;
-    public Sprite PrestigeImage;
-
     public GameObject SellSlimePanel;
     public GameObject BuyUnitPanel;
     public GameObject SwordPanel;
@@ -27,23 +21,23 @@ public class LowerButtonPanelInit : MonoBehaviour
     void Update() {
 
         if (GlobalXp.LevelCount > 1) {
-            SellSlimeButton.GetComponent<Image>().sprite = SellImage;
+            //SellSlimeButton.GetComponent<Text>().text = "Sell";
             SellSlimeButton.interactable = true;
         }
         if (GlobalXp.LevelCount > 3) {
-            BuyUnitButton.GetComponent<Image>().sprite = BuyUnitsImage;
+            // BuyUnitButton.GetComponent<Image>().sprite = BuyUnitsImage;
             BuyUnitButton.interactable = true;
         }
         if (GlobalXp.LevelCount > 4) {
-            SwordButton.GetComponent<Image>().sprite = SwordImage;
+            //SwordButton.GetComponent<Image>().sprite = SwordImage;
             SwordButton.interactable = true;
         }
         if (GlobalXp.LevelCount > 7) {
-            SlimeProductionButton.GetComponent<Image>().sprite = ProductionImage;
+            //SlimeProductionButton.GetComponent<Image>().sprite = ProductionImage;
             SlimeProductionButton.interactable = true;
         }
         if (GlobalXp.LevelCount > 10) {
-            PrestigeButton.GetComponent<Image>().sprite = PrestigeImage;
+            //PrestigeButton.GetComponent<Image>().sprite = PrestigeImage;
             PrestigeButton.interactable = true;
         }
 
